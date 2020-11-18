@@ -1,10 +1,10 @@
 
-<form action="ajblog.php?miss=<?php if(isset($_GET['miss'])){echo (int)$_GET['miss'];}else{echo 1;}?>" method="POST" enctype="multipart/form-data">
+<form action="ajblog.php?miss=<?php if(isset($_GET['miss'])){echo (int)$_GET['miss'];}else{echo 0;}?>" method="POST" enctype="multipart/form-data">
                  user : <input required type="text" name="user"><br>
               pass : <input required type="password" name="pass" id="pren"><br>
 titre : <input required type="text" name="title" id="title"><br>
        commentaire : <textarea required id="commentary" name="commentary"></textarea><br>
-         photo : <input required type="file" name="photo" id="photo"><br>
+         photo : <input type="file" name="photo" id="photo" accept="image/x-png,image/gif,image/jpeg"><br>
                        <input type="submit" value="envoyer">
     </form>
 <h3><?php if(isset($_GET['miss'])&&$_GET['miss']>=1){echo "fails  ".($_GET['miss'])."<br>";}; ?></h3>
