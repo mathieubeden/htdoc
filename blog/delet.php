@@ -44,23 +44,27 @@
     function deputing(){
         if(isset($_POST['user'])){
         if(true){
-            try  //ajout des post dans la bdd
-            {
-            $base = new PDO('mysql:host=127.0.0.1;dbname=basalt', 'root', '');
-            $base->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-            $sql = "DELETE FROM blog WHERE user=:user AND title=:title";
-            // Préparation de la requête avec les marqueurs
-            $resultat = $base->prepare($sql);
-            $resultat->execute(array('user' => $_POST['user'],'title' => $_POST['title']));
-            $id=$base->lastInsertId();
-            $resultat->closeCursor();
+            try  //supression des post dans la bdd
+                {
+                    $base = new PDO('mysql:host=127.0.0.1;dbname=basalt', 'root', '');
+                    $base->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+                    $sql = "DELETE FROM blog WHERE user=:user AND title=:title";
+                    // Préparation de la requête avec les marqueurs
+                    $resultat = $base->prepare($sql);
+                    $resultat->execute(array('user' => $_POST['user'],'title' => $_POST['title']));
+                    $id=$base->lastInsertId();
+                    $resultat->closeCursor();
+                }
+                catch(Exception $e)
+                {
+                // message en cas d'erreur
+                die('Erreur : '.$e->getMessage());
             }
-            catch(Exception $e)
-            {
-            // message en cas d'erreur
-            die('Erreur : '.$e->getMessage());
+            $title=$_POST['title'];
+            $title="$title.jpg";
+            if(file_exists("pho/".$title)){
+                unlink("pho/".$title);
             }
-        
         }
     }
 

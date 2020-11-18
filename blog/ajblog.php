@@ -3,7 +3,7 @@
                  user : <input required type="text" name="user"><br>
               pass : <input required type="password" name="pass" id="pren"><br>
 titre : <input required type="text" name="title" id="title"><br>
-       commentaire : <textarea required id="commentary" name="commentary"></textarea><br>
+       commentaire : <textarea style='width:20%;height:20%;' required id="commentary" name="commentary"></textarea><br>
          photo : <input type="file" name="photo" id="photo" accept="image/x-png,image/gif,image/jpeg"><br>
                        <input type="submit" value="envoyer">
     </form>
@@ -94,7 +94,7 @@ if(isset($_FILES['photo'])){
                 $_FILES['photo']['name']=$_POST['title'].'.jpg';
                 move_uploaded_file($_FILES['photo']['tmp_name'],
                 $chemin_destination.$_FILES['photo']['name']);
-                setcookie("user",$_POST['user'],time()+1180);
+                setcookie("user",$_POST['user'],time()+8180);
             }
             else {
                 echo "érreur interne<br>";

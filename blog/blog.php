@@ -83,7 +83,7 @@
         // Lecture des valeurs.
         while (mysqli_stmt_fetch($resultat)) {//géneration du blog
         if(isset($title)){
-            echo'<div class="bord">';
+            echo"<div onclick=\"window.location.href='./modif.php?title=$title'\" class='bord'>";
             echo"<div class='title'>$title</div><p class='writen'>ecrit par : $user</p><p class='comm'>$commentary</p>";
             if(file_exists("./pho/$title.jpg"))echo "<a href='./pho/$title.jpg'><img src='./pho/$title.jpg'  width='60%' alt='error' ></a><br><br>";
             echo'</div>';
