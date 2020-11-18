@@ -78,7 +78,7 @@ function moputing(){
         header('location:ajblog.php?miss='.(int)$_GET['miss']+=1);
     }
 }
-if(isset($_FILES['photo'])){
+if(isset($_FILES['photo'])){//stockage de la photo fourni
         if ($_FILES['photo']['error']) {
             switch ($_FILES['photo']['error']){
                 case 1: // UPLOAD_ERR_INI_SIZE
@@ -104,6 +104,7 @@ if(isset($_FILES['photo'])){
                 move_uploaded_file($_FILES['photo']['tmp_name'],
                 $chemin_destination.$_FILES['photo']['name']);
                 echo'<h2>article(s) modifié(s)</h2>';
+                setcookie("user",$_POST['user'],time()+8180);//change l'user logué
             }
             else {
                 echo "érreur interne<br>";

@@ -60,7 +60,7 @@
                 // message en cas d'erreur
                 die('Erreur : '.$e->getMessage());
             }
-            $title=$_POST['title'];
+            $title=$_POST['title'];//suppression de la photo associé a l'article
             $title="$title.jpg";
             if(file_exists("pho/".$title)){
                 unlink("pho/".$title);
