@@ -4,8 +4,8 @@ modifier un article (les article de meme titre seron tous modifié)<br>
                  user : <input required type="text" name="user"><br>
               pass : <input required type="password" name="pass" id="pren"><br>
 titre : <input required type="text" name="title" id="title"><br>
-       commentaire : <textarea required id="commentary" name="commentary"></textarea><br>
-         photo : <input required type="file" name="photo" id="photo"><br>
+       commentaire : <textarea style='width:20%;height:20%;' required id="commentary" name="commentary"></textarea><br>
+         photo : <input type="file" name="photo" id="photo" accept="image/x-png,image/gif,image/jpeg"><br>
                        <input type="submit" value="envoyer">
     </form>
 <h3><?php if(isset($_GET['miss'])&&$_GET['miss']>=1){echo "fails  ".($_GET['miss'])."<br>";}; ?></h3>
@@ -20,13 +20,13 @@ if(isset($_POST['user'])&&isset($_POST['pass'])){//verification du uset et du pa
         try{
             $base = new PDO('mysql:host=127.0.0.1;dbname=basalt', 'root', '');
             $base->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-            $sql = "SELECT user, pass FROM blog WHERE user=:user AND pass=:pass";
+            $sql = "SELECT user, pass FROM blog WHERE user=:user AND pass=:pass AND title=:title";
             // Préparation de la requête avec les marqueurs
             $resultat = $base->prepare($sql);
-            $resultat->execute(array('user' => $_POST['user'],'pass' => $_POST['pass']));
+            $resultat->execute(array('user' => $_POST['user'],'pass' => $_POST['pass'], 'title' => $_POST['title']));
             $ligne = $resultat->fetch();
                 if(isset($ligne['user'])){//si le login est bon
-                    inputing();
+                    moputing();
                 }
                 
                 $resultat->closeCursor();
@@ -44,20 +44,20 @@ if(isset($_POST['user'])&&isset($_POST['pass'])){//verification du uset et du pa
     }
 
 
-function inputing(){
+function moputing(){
     if(isset($_POST['user'])){
     if(true){
         try  //ajout des post dans la bdd
         {
         $base = new PDO('mysql:host=127.0.0.1;dbname=basalt', 'root', '');
         $base->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-        $sql = "UPDATE blog SET commentary=:commentary WHERE title=:title";
+        $sql = "UPDATE blog SET commentary=:commentary WHERE user=:user AND title=:title";
         // Préparation de la requête avec les marqueurs
         $resultat = $base->prepare($sql);
-        $resultat->execute(array('title' => $_POST['title'],'commentary' =>$_POST['commentary']));
+        $resultat->execute(array('user' => $_POST['user'],'title' => $_POST['title'],'commentary' =>$_POST['commentary']));
         $id=$base->lastInsertId();
         $resultat->closeCursor();
-        echo'ok';
+       
         }
         catch(Exception $e)
         {
@@ -96,6 +96,7 @@ if(isset($_FILES['photo'])){
                 $_FILES['photo']['name']=$_POST['title'].'.jpg';
                 move_uploaded_file($_FILES['photo']['tmp_name'],
                 $chemin_destination.$_FILES['photo']['name']);
+                echo'<h2>article(s) modifié(s)</h2>';
             }
             else {
                 echo "érreur interne<br>";

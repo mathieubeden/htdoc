@@ -11,17 +11,18 @@
         width : 50%;
         display : block;
         margin:20px;
+        margin-left:19%;
         text-align:center;
         border-radius:10px
     }
     .boton{
         border : black solid 1px;
-        width : 150px;
+        width : 80%;
         display : inline-block;
         margin:10px;
         text-align:center;
         border-radius:10px;
-        padding:10px;
+        padding:7px;
         transition:0.5s;
     }
     .boton:hover{
@@ -31,7 +32,7 @@
     }
     .redrok{
         position:fixed;
-        right:10px;
+        right:0px;
     }
     .comm{
         width:90% !important;
@@ -39,8 +40,21 @@
     }
     p {
         text-indent: 30px;
-        text-transform: uppercase;
+        font-size:25px
     }
+    .title{
+        text-transform: uppercase;
+        text-align:center;
+         text-indent: 30px;
+         color : red;
+         font-size:50px;
+         margin-top:10px
+    }
+    .writen{
+        font-size:15px;
+        color:blue
+    }
+
 </style>
 <body>
     <div class="redrok">
@@ -68,10 +82,12 @@
         $ok = mysqli_stmt_bind_result($resultat,$user,$pass,$title,$commentary);
         // Lecture des valeurs.
         while (mysqli_stmt_fetch($resultat)) {//géneration du blog
-        echo'<div class="bord">';
-        echo"<h3>$title</h3><p>ecrit par $user</p><p class='comm'>$commentary</p>";
-        echo "<a href='./pho/$title.jpg'><img src='./pho/$title.jpg'  width='60%' alt='error' ></a><br><br>";
-        echo'</div>';
+        if(isset($title)){
+            echo'<div class="bord">';
+            echo"<div class='title'>$title</div><p class='writen'>ecrit par : $user</p><p class='comm'>$commentary</p>";
+            if(file_exists("./pho/$title.jpg"))echo "<a href='./pho/$title.jpg'><img src='./pho/$title.jpg'  width='60%' alt='error' ></a><br><br>";
+            echo'</div>';
+        }
         }
         mysqli_stmt_close($resultat);//déconnection
 
