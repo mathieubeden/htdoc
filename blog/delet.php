@@ -17,10 +17,10 @@
             try{
                 $base = new PDO('mysql:host=127.0.0.1;dbname=basalt', 'root', '');
                 $base->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-                $sql = "SELECT user, pass FROM blog WHERE user=:user AND pass=:pass";
+                $sql = "SELECT user, pass FROM blog WHERE user=:user AND pass=:pass AND title=:title";
                 // Préparation de la requête avec les marqueurs
                 $resultat = $base->prepare($sql);
-                $resultat->execute(array('user' => $_POST['user'],'pass' => $_POST['pass']));
+                $resultat->execute(array('user' => $_POST['user'],'pass' => $_POST['pass'],'title' => $_POST['title']));
                 $ligne = $resultat->fetch();
                     if(isset($ligne['user'])){//si le login est bon
                         deputing();
