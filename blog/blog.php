@@ -71,12 +71,10 @@
         // Préparation de la requête
         $resultat = mysqli_prepare($base, $sql);
         echo'<br>';
-        // Liaison des paramètres.
         // Exécution-de la requête.
         $ok = mysqli_stmt_execute($resultat);
-        if ($ok == FALSE) {
-        }
-        else {
+        if ($ok !== FALSE) {
+        
 
         // Association des variables de résultat.
         $ok = mysqli_stmt_bind_result($resultat,$user,$pass,$title,$commentary);
@@ -92,7 +90,7 @@
         mysqli_stmt_close($resultat);//déconnection
 
         }
-        if (mysqli_close($base)) {
+        if (mysqli_close($base)) {//affichage des éreures
         }
         else {
         echo 'Echec de la déconnexion.';

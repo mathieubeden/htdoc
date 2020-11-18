@@ -94,7 +94,7 @@ if(isset($_FILES['photo'])){
                 $_FILES['photo']['name']=$_POST['title'].'.jpg';
                 move_uploaded_file($_FILES['photo']['tmp_name'],
                 $chemin_destination.$_FILES['photo']['name']);
-                setcookie("user",$_POST['user'],time()+8180);
+                setcookie("user",$_POST['user'],time()+8180);//change l'user logué
             }
             else {
                 echo "érreur interne<br>";
