@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="blog de parole de geek">
     <title>bienvenus <?php echo $_COOKIE['user'];?></title>
 </head>
 <style>
@@ -47,7 +48,7 @@
         text-align:center;
          text-indent: 30px;
          color : red;
-         font-size:50px;
+         font-size:200%;
          margin-top:10px
     }
     .writen{
@@ -62,6 +63,8 @@
         <a class='boton' href="modif.php">modifier un article</a><br> 
         <a class='boton' href="delet.php">suprimer un article</a><br> 
     </div>
+    <br><br>
+    <h1 style='margin-left:23%;'>blog de Parole De Geek (utilisateur connu seulement)</h1>
   <br>  
   <?php
         // Connexion à la base de données
@@ -83,7 +86,7 @@
         if(isset($title)){
             echo"<div onclick=\"window.location.href='./modif.php?title=$title'\" class='bord'>";
             echo"<div class='title'>$title</div><p class='writen'>ecrit par : $user</p><p class='comm'>$commentary</p>";
-            if(file_exists("./pho/$title.jpg"))echo "<a href='./pho/$title.jpg'><img src='./pho/$title.jpg'  width='60%' alt='error' ></a><br><br>";
+            if(file_exists("./pho/$title.jpg"))echo "<a href='./pho/$title.jpg'><img src='./pho/$title.jpg'  width='70%' alt='error' ></a><br><br>";
             echo'</div>';
         }
         }
