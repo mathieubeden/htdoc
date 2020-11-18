@@ -1,5 +1,6 @@
 
-<form action="ajblog.php?miss=<?php if(isset($_GET['miss'])){echo (int)$_GET['miss'];}else{echo 1;}?>" method="POST" enctype="multipart/form-data">
+<form action="modif.php?miss=<?php if(isset($_GET['miss'])){echo (int)$_GET['miss'];}else{echo 0;}?>" method="POST" enctype="multipart/form-data">
+modifier un article (les article de meme titre seron tous modifié)<br>
                  user : <input required type="text" name="user"><br>
               pass : <input required type="password" name="pass" id="pren"><br>
 titre : <input required type="text" name="title" id="title"><br>
@@ -50,10 +51,10 @@ function inputing(){
         {
         $base = new PDO('mysql:host=127.0.0.1;dbname=basalt', 'root', '');
         $base->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-        $sql = "INSERT INTO blog (user, pass, title, commentary) VALUES (:user, :pass, :title, :commentary)";
+        $sql = "UPDATE `blog` SET `commentary`=:commentary WHERE 'title'=:title";
         // Préparation de la requête avec les marqueurs
         $resultat = $base->prepare($sql);
-        $resultat->execute(array('user' => $_POST['user'],'pass' => $_POST['pass'],'title' => $_POST['title'],'commentary' =>$_POST['commentary']));
+        $resultat->execute(array('title' => $_POST['title'],'commentary' =>$_POST['commentary']));
         $id=$base->lastInsertId();
         $resultat->closeCursor();
         }
@@ -94,8 +95,6 @@ if(isset($_FILES['photo'])){
                 $_FILES['photo']['name']=$_POST['title'].'.jpg';
                 move_uploaded_file($_FILES['photo']['tmp_name'],
                 $chemin_destination.$_FILES['photo']['name']);
-                setcookie("user",$_POST['user'],time()+1180);
-                echo "ok ".$_COOKIE['user'];
             }
             else {
                 echo "érreur interne<br>";
