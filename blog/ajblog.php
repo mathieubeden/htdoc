@@ -7,7 +7,7 @@ titre : <input required type="text" name="title" id="title"><br>
          photo : <input required type="file" name="photo" id="photo"><br>
                        <input type="submit" value="envoyer">
     </form>
-<h3><?php if(isset($_GET['miss'])){echo "fails  ".($_GET['miss'])."<br>";}; ?></h3>
+<h3><?php if(isset($_GET['miss'])&&$_GET['miss']>=1){echo "fails  ".($_GET['miss'])."<br>";}; ?></h3>
 <a href="blog.php">aller au blog</a>
 <?php
 //hash('ripemd160', 'root');
@@ -95,7 +95,6 @@ if(isset($_FILES['photo'])){
                 move_uploaded_file($_FILES['photo']['tmp_name'],
                 $chemin_destination.$_FILES['photo']['name']);
                 setcookie("user",$_POST['user'],time()+1180);
-                echo "ok ".$_COOKIE['user'];
             }
             else {
                 echo "érreur interne<br>";

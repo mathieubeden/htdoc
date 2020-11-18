@@ -8,7 +8,7 @@ titre : <input required type="text" name="title" id="title"><br>
          photo : <input required type="file" name="photo" id="photo"><br>
                        <input type="submit" value="envoyer">
     </form>
-<h3><?php if(isset($_GET['miss'])){echo "fails  ".($_GET['miss'])."<br>";}; ?></h3>
+<h3><?php if(isset($_GET['miss'])&&$_GET['miss']>=1){echo "fails  ".($_GET['miss'])."<br>";}; ?></h3>
 <a href="blog.php">aller au blog</a>
 <?php
 //hash('ripemd160', 'root');
@@ -51,12 +51,13 @@ function inputing(){
         {
         $base = new PDO('mysql:host=127.0.0.1;dbname=basalt', 'root', '');
         $base->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-        $sql = "UPDATE `blog` SET `commentary`=:commentary WHERE 'title'=:title";
+        $sql = "UPDATE blog SET commentary=:commentary WHERE title=:title";
         // Préparation de la requête avec les marqueurs
         $resultat = $base->prepare($sql);
         $resultat->execute(array('title' => $_POST['title'],'commentary' =>$_POST['commentary']));
         $id=$base->lastInsertId();
         $resultat->closeCursor();
+        echo'ok';
         }
         catch(Exception $e)
         {
