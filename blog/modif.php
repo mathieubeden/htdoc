@@ -78,7 +78,7 @@ function moputing(){
         header('location:ajblog.php?miss='.(int)$_GET['miss']+=1);
     }
 }
-if(isset($_FILES['photo'])){//stockage de la photo fourni
+if(isset($_FILES['photo'])&&isset($_FILES['photo']['name'])){//stockage de la photo fourni
         if ($_FILES['photo']['error']) {
             switch ($_FILES['photo']['error']){
                 case 1: // UPLOAD_ERR_INI_SIZE
@@ -93,7 +93,7 @@ if(isset($_FILES['photo'])){//stockage de la photo fourni
                     echo "L'envoi du fichier a été interrompu pendant le transfert.";
                     break;
                 case 4: // UPLOAD_ERR_NO_FILE
-                    echo "La taille du fichier que vous avez envoyé est nulle." ; break;
+                    break;
             }
         } 
         else if($_FILES){
@@ -105,12 +105,13 @@ if(isset($_FILES['photo'])){//stockage de la photo fourni
                 $chemin_destination.$_FILES['photo']['name']);
                 echo'<h2>article(s) modifié(s)</h2>';
                 setcookie("user",$_POST['user'],time()+8180);//change l'user logué
+                 
             }
             else {
                 echo "érreur interne<br>";
             }
         }
-    }
+    }header('location:blog.php');
 
 }
 
