@@ -64,7 +64,7 @@
         <a class='boton' href="delet.php">suprimer un article</a><br> 
     </div>
     <br><br>
-    <h1 style='margin-left:23%;'>blog de Parole De Geek (utilisateur connu seulement)</h1>
+    <h1 style='margin-left:23%;'>blog de Parole De Geek</h1>
   <br>  
   <?php
         // Connexion à la base de données

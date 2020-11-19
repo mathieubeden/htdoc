@@ -25,8 +25,7 @@ modifier un article (les article de meme titre seron tous modifié)<br>
     }
 if(isset($_POST['user'])&&isset($_POST['pass'])){//verification du uset et du pass
         try{
-            $base = new PDO('mysql:host=127.0.0.1;dbname=basalt', 'root', '');
-            $base->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+            include('./connect.php');
             $sql = "SELECT user, pass FROM blog WHERE user=:user AND pass=:pass AND title=:title";
             // Préparation de la requête avec les marqueurs
             $resultat = $base->prepare($sql);
@@ -56,8 +55,6 @@ function moputing(){
     if(true){
         try  //ajout des post dans la bdd
         {
-        $base = new PDO('mysql:host=127.0.0.1;dbname=basalt', 'root', '');
-        $base->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         $sql = "UPDATE blog SET commentary=:commentary WHERE user=:user AND title=:title";
         // Préparation de la requête avec les marqueurs
         $resultat = $base->prepare($sql);
