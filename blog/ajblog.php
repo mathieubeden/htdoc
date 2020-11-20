@@ -47,7 +47,7 @@ if(isset($_POST['user'])&&isset($_POST['pass'])){//verification du uset et du pa
 
 
 function inputing(){
-    if(isset($_POST['user'])){
+    if(isset($_POST['user'])){//ajout de la date celon un format defini
         $date = date("d/m/Y à H:i");
     if(true){
         try  //ajout des post dans la bdd
@@ -72,12 +72,10 @@ if(isset($_FILES['photo'])){
         if ($_FILES['photo']['error']) {
             switch ($_FILES['photo']['error']){
                 case 1: // UPLOAD_ERR_INI_SIZE
-                    echo "La taille du fichier est plus grande que la limite autorisée par le serveur
-                    (paramètre upload_max_filesize du fichier php.ini).";
+                    echo "La taille du fichier est plus grande que la limite autorisée par le serveur";
                     break;
                 case 2: // UPLOAD_ERR_FORM_SIZE
-                    echo "La taille du fichier est plus grande que la limite autorisée par le
-                    formulaire (paramètre post_max_size du fichier php.ini).";
+                    echo "La taille du fichier est plus grande que la limite autorisée par le formulaire.";
                     break;
                 case 3: // UPLOAD_ERR_PARTIAL
                     echo "L'envoi du fichier a été interrompu pendant le transfert.";

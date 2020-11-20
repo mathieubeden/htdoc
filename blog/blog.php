@@ -73,6 +73,7 @@
         $sql = "SELECT user, pass ,title,commentary,date FROM blog WHERE 1";
         // Préparation de la requête
         $resultat = mysqli_prepare($base, $sql);
+        echo'<br>';
         // Exécution-de la requête.
         $ok = mysqli_stmt_execute($resultat);
         if ($ok !== FALSE) {
@@ -92,6 +93,9 @@
 
         }
         if (mysqli_close($base)) {//affichage des éreures
+        }
+        else {
+        echo 'Echec de la déconnexion.';
         }
         }
         else {
