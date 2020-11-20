@@ -1,2 +1,5 @@
-<?php $base = new PDO('mysql:host=127.0.0.1;dbname=basalt', 'root', '');
-            $ ?>
+<?php 
+    $base = new PDO('mysql:host=127.0.0.1;dbname=basalt', 'root', '');
+    $base->exec('SET NAMES utf8');
+    $base->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+ ?>

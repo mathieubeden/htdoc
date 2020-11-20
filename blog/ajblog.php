@@ -17,8 +17,7 @@ titre : <input required type="text" name="title" id="title"><br>
     }
 if(isset($_POST['user'])&&isset($_POST['pass'])){//verification du uset et du pass
         try{
-            $base = new PDO('mysql:host=127.0.0.1;dbname=basalt', 'root', '');
-            $base->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+            include('./connect.php');
             $sql = "SELECT user, pass FROM blog WHERE user=:user AND pass=:pass";
             // Préparation de la requête avec les marqueurs
             $resultat = $base->prepare($sql);
@@ -28,7 +27,7 @@ if(isset($_POST['user'])&&isset($_POST['pass'])){//verification du uset et du pa
                     inputing();
                 }
                 
-                $resultat->closeCursor();
+               
             }
             catch(Exception $e)
             {
@@ -48,14 +47,12 @@ function inputing(){
     if(true){
         try  //ajout des post dans la bdd
         {
-        $base = new PDO('mysql:host=127.0.0.1;dbname=basalt', 'root', '');
-        $base->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+        include('./connect.php');
         $sql = "INSERT INTO blog (user, pass, title, commentary) VALUES (:user, :pass, :title, :commentary)";
         // Préparation de la requête avec les marqueurs
         $resultat = $base->prepare($sql);
         $resultat->execute(array('user' => $_POST['user'],'pass' => $_POST['pass'],'title' => $_POST['title'],'commentary' =>$_POST['commentary']));
         $id=$base->lastInsertId();
-        $resultat->closeCursor();
         }
         catch(Exception $e)
         {

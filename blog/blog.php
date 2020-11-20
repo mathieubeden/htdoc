@@ -86,7 +86,7 @@
         if(isset($title)){
             echo"<div onclick=\"window.location.href='./modif.php?title=$title'\" class='bord'>";
             echo"<div class='title'>$title</div><p class='writen'>ecrit par : $user</p><p class='comm'>$commentary</p>";
-            if(file_exists("./pho/$title.jpg"))echo "<a href='./pho/$title.jpg'><img src='./pho/$title.jpg'  width='70%' alt='error' ></a><br><br>";
+            if(file_exists("./pho/$title.jpg"))echo "<a href='./pho/$title.jpg'><img src='./pho/$title.jpg'  width='70%' alt='404' ></a><br><br>";
             echo'</div>';
         }
         }

@@ -25,8 +25,6 @@
                     if(isset($ligne['user'])){//si le login est bon
                         deputing();
                     }
-
-                    $resultat->closeCursor();
                 }
                 catch(Exception $e)
                 {
@@ -53,7 +51,6 @@
                     $resultat = $base->prepare($sql);
                     $resultat->execute(array('user' => $_POST['user'],'title' => $_POST['title']));
                     $id=$base->lastInsertId();
-                    $resultat->closeCursor();
                 }
                 catch(Exception $e)
                 {

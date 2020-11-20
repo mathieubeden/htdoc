@@ -35,7 +35,7 @@ if(isset($_POST['user'])&&isset($_POST['pass'])){//verification du uset et du pa
                     moputing();
                 }
                 
-                $resultat->closeCursor();
+                
             }
             catch(Exception $e)
             {
@@ -55,13 +55,11 @@ function moputing(){
     if(true){
         try  //ajout des post dans la bdd
         {
+            include('./connect.php');
         $sql = "UPDATE blog SET commentary=:commentary WHERE user=:user AND title=:title";
         // Préparation de la requête avec les marqueurs
         $resultat = $base->prepare($sql);
         $resultat->execute(array('user' => $_POST['user'],'title' => $_POST['title'],'commentary' =>$_POST['commentary']));
-        $id=$base->lastInsertId();
-        $resultat->closeCursor();
-       
         }
         catch(Exception $e)
         {
