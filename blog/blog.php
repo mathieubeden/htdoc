@@ -70,33 +70,28 @@
         // Connexion à la base de données
         $base = mysqli_connect("127.0.0.1", "root", "", "basalt");
         if ($base) {
-        $sql = "SELECT user, pass ,title,commentary FROM blog WHERE 1";
+        $sql = "SELECT user, pass ,title,commentary,date FROM blog WHERE 1";
         // Préparation de la requête
         $resultat = mysqli_prepare($base, $sql);
-        echo'<br>';
         // Exécution-de la requête.
         $ok = mysqli_stmt_execute($resultat);
         if ($ok !== FALSE) {
         
 
         // Association des variables de résultat.
-        $ok = mysqli_stmt_bind_result($resultat,$user,$pass,$title,$commentary);
+        $ok = mysqli_stmt_bind_result($resultat,$user,$pass,$title,$commentary,$date);
         // Lecture des valeurs.
         while (mysqli_stmt_fetch($resultat)) {//géneration du blog
         if(isset($title)){
             echo"<div onclick=\"window.location.href='./modif.php?title=$title'\" class='bord'>";
-            echo"<div class='title'>$title</div><p class='writen'>ecrit par : $user</p><p class='comm'>$commentary</p>";
+            echo"<div class='title'>$title</div><p class='writen'>ecrit par : $user</p><p class='writen'>publié le $date</p><p class='comm'>$commentary</p>";
             if(file_exists("./pho/$title.jpg"))echo "<a href='./pho/$title.jpg'><img src='./pho/$title.jpg'  width='70%' alt='404' ></a><br><br>";
             echo'</div>';
         }
         }
-        mysqli_stmt_close($resultat);//déconnection
 
         }
         if (mysqli_close($base)) {//affichage des éreures
-        }
-        else {
-        echo 'Echec de la déconnexion.';
         }
         }
         else {

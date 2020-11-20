@@ -26,6 +26,10 @@ if(isset($_POST['user'])&&isset($_POST['pass'])){//verification du uset et du pa
                 if(isset($ligne['user'])){//si le login est bon
                     inputing();
                 }
+                else{
+                    if(isset($_GET['miss'])){$_GET['miss']+=1;}else{$_GET['miss']=1;}
+                    header('location:ajblog.php?miss='.(int)$_GET['miss']+=1);
+                }
                 
                
             }
@@ -44,14 +48,15 @@ if(isset($_POST['user'])&&isset($_POST['pass'])){//verification du uset et du pa
 
 function inputing(){
     if(isset($_POST['user'])){
+        $date = date("d/m/Y à H:i");
     if(true){
         try  //ajout des post dans la bdd
         {
         include('./connect.php');
-        $sql = "INSERT INTO blog (user, pass, title, commentary) VALUES (:user, :pass, :title, :commentary)";
+        $sql = "INSERT INTO blog (user, pass, title, commentary, date) VALUES (:user, :pass, :title, :commentary ,:date)";
         // Préparation de la requête avec les marqueurs
         $resultat = $base->prepare($sql);
-        $resultat->execute(array('user' => $_POST['user'],'pass' => $_POST['pass'],'title' => $_POST['title'],'commentary' =>$_POST['commentary']));
+        $resultat->execute(array('user' => $_POST['user'],'pass' => $_POST['pass'],'title' => $_POST['title'],'commentary' =>$_POST['commentary'],'date' => $date));
         $id=$base->lastInsertId();
         }
         catch(Exception $e)
@@ -61,10 +66,7 @@ function inputing(){
         }
        
     }
-    else{
-        if(isset($_GET['miss'])){$_GET['miss']+=1;}else{$_GET['miss']=1;}
-        header('location:ajblog.php?miss='.(int)$_GET['miss']+=1);
-    }
+    
 }
 if(isset($_FILES['photo'])){
         if ($_FILES['photo']['error']) {
@@ -81,7 +83,7 @@ if(isset($_FILES['photo'])){
                     echo "L'envoi du fichier a été interrompu pendant le transfert.";
                     break;
                 case 4: // UPLOAD_ERR_NO_FILE
-                    echo "La taille du fichier que vous avez envoyé est nulle." ; break;
+                    break;
             }
         } 
         else if($_FILES){
