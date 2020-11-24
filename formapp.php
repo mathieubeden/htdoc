@@ -9,7 +9,7 @@
 <br>
     <form action="formapp.php" method="get">
     
-    <input type="number" name="nba" value="5" id="nba" max="2500">
+    <input type="number" name="nba" value="5" id="nba" max="5000">
     <br><br>
     <input type="submit" value="sub">
     </form>
@@ -55,8 +55,8 @@ if(isset($_GET['nba'])){
     $nba=$_GET['nba'];
 }
 if($nba<=1){$nba=1;}
-if($nba>2500){
-    echo 'le nombre est trop long. éssayez avec un nombre plus petit que 2500 (question de performance)';
+if($nba>5000){
+    echo 'le nombre est trop long. éssayez avec un nombre plus petit que 5000 (question de performance)';
 }
 else{
     echo"nombre de mots : $nba <br>";
