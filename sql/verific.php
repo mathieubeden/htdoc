@@ -7,7 +7,7 @@ try
 $base = new PDO('mysql:host=127.0.0.1;dbname=basalt', 'root', ''); //’mysql:host=$host;dbname=$db;charset=utf8’
 $base->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 // Récupèration des données de la table Personne
-$resultat = $base->query('SELECT nom,prenom FROM personne WHERE nom="'.$user.'" AND prenom="'.$pass.'"');
+$resultat = $base->query('SELECT nom,prenom FROM personne WHERE nom='.$user.' AND prenom='.$pass);
 
 // Affichage de chaques entrées une à une
     if($resultat->rowCount()){
