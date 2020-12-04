@@ -9,6 +9,10 @@ class deux_roues extends vehicule{
     public function get_cilyndré($litre){
         return $this->cylindree;
     }
+    public function ajouter_personne($personne){
+        echo 'clouk frouch frouh plouk bioup bioup en voiture simone !<br>';
+        $this->poids+=$personne+2;
+    }
 }
 
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-class vehicule{
+abstract class vehicule{
     protected $couleur;
     protected $poids;
 
@@ -11,16 +11,13 @@ class vehicule{
 
     public function rouler(){
         if($this->poids>=5){
-            $this->poids-=0;
+            //$this->poids-=0; //conso de carbu
             echo 'broum broum<br>';
         }else{
         echo 'broum iiiiiiiik boum slakalakalak pouf zut !<br>';
         }
     }
-    public function ajouter_personne($personne){
-        echo 'clouk frouch frouh plouk bioup bioup en voiture simone !<br>';
-        $this->poids+=$personne;
-    }
+    abstract public function ajouter_personne($personne);
     public function get_poids(){
         return $this->poids;
     }
