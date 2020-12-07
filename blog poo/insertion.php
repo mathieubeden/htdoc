@@ -20,6 +20,8 @@
         <br>
         <input type="submit" value="envoyer">
     </form>
+    <br><br>
+    <button onclick="window.location.href='./blogoo.php'">aller au blog</button>
 
 
 

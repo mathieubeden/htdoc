@@ -5,7 +5,7 @@ class Manager{
 
     public function __construct ($base){ // recup de la bdd
         $this->base = $base;
-        $this->date = date("Y-m-d H:i:s");
+        $this->date = date("d/m/Y à H:i");
     }
     public function insert_art($article){
 
