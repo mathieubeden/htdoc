@@ -59,6 +59,7 @@
 </style>
 <body>
     <div class="redrok">
+        <?php if(isset($_COOKIE['user'])){echo '<a class="boton" href="connect.php">'.$_COOKIE['user'].'</a>';} ?>
         <a class='boton' href="insertion.php">ajouter un article</a>
     </div>
     <br><br>
@@ -76,7 +77,7 @@
         // Affichage de chaques entrées une à une
         while ($donnees = $resultat->fetch()){
             $date=$donnees['date'];
-            echo"<div onclick=\"window.location.href='./modif.php?title=".$donnees['titre']."'\" class='bord'>";
+            echo"<div onclick=\"window.location.href='./modelet.php?title=".$donnees['titre']."&user=".$donnees['user']."'\" class='bord'>";
             echo"<div class='title'>".$donnees['titre']."</div><p class='writen'>ecrit par : ".$donnees['user']."</p><p class='writen'>publié le ".$date."</p><p class='comm'>".$donnees['comm']."</p>";
             if(file_exists("./photo/".$donnees['id'].".jpg"))echo "<a href='./photo/".$donnees['id'].".jpg'><img src='./photo/".$donnees['id'].".jpg'  width='70%' alt='404' ></a><br><br>";
             echo'</div>';

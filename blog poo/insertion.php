@@ -8,9 +8,8 @@
 <body>
     
     <form action="./insert.php" method="post" enctype="multipart/form-data">
-        user : <input required type="text" name="user">
-        <br>
-        pass : <input type="password" name="pass" id="pren">
+        <?php if(!isset($_COOKIE['user'])){echo 'user : ';} ?>
+        <input <?php if(isset($_COOKIE['user'])){echo "hidden value='".$_COOKIE['user']."'";}else{echo 'required';} ?> type="text" name="user">
         <br>
         titre : <input required type="text" name="titre" id="title">
         <br>

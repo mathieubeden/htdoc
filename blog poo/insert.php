@@ -2,7 +2,9 @@
 
 include('./article.php');
 include('./manager.php');
-
+if($_COOKIE['user']!==$_POST['user']){
+    header('location:connect.php');
+}
 $article=new Article();
 if(isset($_POST)){// definition de l'article (la photo sera defini seulement par l'id de l'article)
     $article->set_all($_POST);
