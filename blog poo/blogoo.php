@@ -59,11 +59,12 @@
 </style>
 <body>
     <div class="redrok">
-        <?php if(isset($_COOKIE['user'])){echo '<a class="boton" href="connect.php">'.$_COOKIE['user'].'</a>';} ?>
+        <a class="boton" href="connect.php"><?php if(isset($_COOKIE['user'])){echo $_COOKIE['user'];}else{echo 'connection';} ?></a>
         <a class='boton' href="insertion.php">ajouter un article</a>
     </div>
     <br><br>
-    <h1 style='margin-left:23%;'>blog de Parole De Geek en programmation orienté objet</h1>
+    
+    <h1 style='margin-left:23%;'>bienvenus <?php if(isset($_COOKIE['user'])){echo $_COOKIE['user'];} ?></h1>
   <br>  
   <?php
         // Connexion à la base de données
@@ -77,7 +78,7 @@
         // Affichage de chaques entrées une à une
         while ($donnees = $resultat->fetch()){
             $date=$donnees['date'];
-            echo"<div onclick=\"window.location.href='./modelet.php?title=".$donnees['titre']."&user=".$donnees['user']."'\" class='bord'>";
+            echo"<div onclick=\"window.location.href='./modelet.php?title=".$donnees['titre']."&user=".$donnees['user']."&id=".$donnees['id']."'\" class='bord'>";
             echo"<div class='title'>".$donnees['titre']."</div><p class='writen'>ecrit par : ".$donnees['user']."</p><p class='writen'>publié le ".$date."</p><p class='comm'>".$donnees['comm']."</p>";
             if(file_exists("./photo/".$donnees['id'].".jpg"))echo "<a href='./photo/".$donnees['id'].".jpg'><img src='./photo/".$donnees['id'].".jpg'  width='70%' alt='404' ></a><br><br>";
             echo'</div>';

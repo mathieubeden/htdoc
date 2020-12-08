@@ -6,7 +6,7 @@ include('./auth.php');
         $verific=new auth($_POST['user'],$_POST['pass']);
 
         if($verific->verification_user()){
-            setcookie($_POST['user'], $value, time()+600);
+            setcookie('user', $_POST['user'], time()+1000);
             header('location:blogoo.php');
         }else{
             echo 'false';
