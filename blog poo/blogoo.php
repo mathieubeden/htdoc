@@ -9,7 +9,7 @@
 <style>
     .bord{
         border : black solid 1px;
-        width : 50%;
+        width : 40%;
         display : block;
         margin:20px;
         margin-left:19%;
@@ -60,7 +60,8 @@
 <body>
     <div class="redrok">
         <a class="boton" href="connect.php"><?php if(isset($_COOKIE['user'])){echo $_COOKIE['user'];}else{echo 'connection';} ?></a>
-        <a class='boton' href="insertion.php">ajouter un article</a>
+        <a class='boton' href="insertion.php">ajouter un article</a><br>
+        <a class='boton' href="signin.php">inscription</a>
     </div>
     <br><br>
     
@@ -68,19 +69,19 @@
   <br>  
   <?php
         // Connexion à la base de données
-       $base = new PDO('mysql:host=127.0.0.1;dbname=blogoo', 'root', ''); //’mysql:host=$host;dbname=$db;charset=utf8’
+       $base = new PDO('mysql:host=127.0.0.1;dbname=blogoo', 'root', ''); 
         $base->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         if ($base) {
         $sql = "SELECT * FROM blog";
         // Préparation de la requête
        $resultat = $base->query('SELECT * FROM blog');
             
-        // Affichage de chaques entrées une à une
+        // Affichage de chaques article un par un
         while ($donnees = $resultat->fetch()){
             $date=$donnees['date'];
             echo"<div onclick=\"window.location.href='./modelet.php?title=".$donnees['titre']."&user=".$donnees['user']."&id=".$donnees['id']."'\" class='bord'>";
             echo"<div class='title'>".$donnees['titre']."</div><p class='writen'>ecrit par : ".$donnees['user']."</p><p class='writen'>publié le ".$date."</p><p class='comm'>".$donnees['comm']."</p>";
-            if(file_exists("./photo/".$donnees['id'].".jpg"))echo "<a href='./photo/".$donnees['id'].".jpg'><img src='./photo/".$donnees['id'].".jpg'  width='70%' alt='404' ></a><br><br>";
+            echo "<a href='./photo/".$donnees['id'].".jpg' target='_blank'><img src='./photo/".$donnees['id'].".jpg'  width='60%' alt='404' ></a><br><br>";
             echo'</div>';
         }
 

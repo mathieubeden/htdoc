@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <title>test scss</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<script>
+       { function maj(){
+        var d = new Date();
+        var h = d.getHours();
+        var m = d.getMinutes();
+        var s = d.getSeconds();
+        var ms = d.getMilliseconds();
+            if(s<10){s="0"+s}
+            if(m<10){m="0"+m}
+            if(h<10){h="0"+h}
+            if(ms<100){ms="0"+ms;
+            if(ms<10){ms="0"+ms}}
+            if(h>17&&m>30){
+            var element=document.getElementById("ff");
+            element.innerHTML="<p>c'est l'heure !!!!!!!</p>"}
+            document.getElementById("heure").innerHTML = h;
+            document.getElementById("min").innerHTML = m;
+            document.getElementById("sec").innerHTML = s;
+            document.getElementById("mili").innerHTML = ms;}
+setInterval(maj,11);
+       setInterval("horloge()", 100);}
+       function tt(){
+           var element=document.getElementById("ff");
+           element.innerHTML="<p>ya plus rien !!!!!!!</p>"
+       }
+       function reset(){
+        window.location.href = "./test.html";
+       }
+        function hi(nom){
+           if(nom){
+           alert("bonjour "+nom);
+            }else{
+           alert("hello world");
+                }
+            }
+       
+</script>
+<body>
+    <a href="./index.html">index</a>
+    <h1>test</h1>
+    <div id="heure" class="element"></div>
+    <div class="element">:</div>
+    <div id="min" class="element"></div>
+    <div class="element">:</div>
+    <div id="sec" class="element"></div>
+    <div class="element">:</div>
+    <div id="mili" class="element last"></div>
+    <div class="element"></div>
+    <br>
+    <div id="ff" class="element"></div>
+    <p>feuille de style en scss</p>
+    <button onclick="hi('mathieu')">monjour moi</button>
+    <button onclick="hi()">hello world</button>
+    <button onclick="tt()">hello world</button>
+    <button onclick="reset()">reset</button>
+    <p>alea est comme un dés de 100.</p>
+    <input type="button" value="alea" onclick="alea();"><br>
+    <input type="button" value="page aléatoire" onclick="has();"><br>
+    <p>lui par contre c'est un pile ou face.</p>
+    <input type="button" value="pile ou face ?" onclick="pof();"><br>
+    <p>ce bouton t'envoi ver une de mes page au hasard.(conçu pour l'index)</p>
+    <div id="ff">
+    <input type="button" value="exo1" onclick="exo1();"><br>
+    <input type="button" value="exo2" onclick="exo2();"><br>
+    <input type="button" value="exo3" onclick="exo3();"><br>
+    <input type="button" value="exo4" onclick="exo4();"><br>
+    <input type="button" value="exo5" onclick="aleac();"><br>
+    <input type="button" value="exo6" onclick="exo6();"><br>
+    <input type="button" value="exo7" onclick="exo7();"><br>
+    <input type="button" value="exa1" onclick="exa1(5);"><br>
+    <input type="button" value="exa2" onclick="exa1(8);"><br>
+    <div id="roro"></div>
+    <div id="roro2"></div>
+    <a href="./gol.html">gold</a>
+    </div>
+    <div id="date">
+
+    </div>
+</body>
+<script src="./demarrage.js"></script>
+<script src="./test.js"></script>
+<script>
+{
+        function exa1(entier){
+            var result = entier*entier;
+            return result;
+        }
+        var ent1 =exa1(5);
+        var ent1 =exa1(17);
+        var div =document.getElementById("roro");
+        div.innerHTML = exa1;
+        var div =document.getElementById("roro");
+        div.innerHTML = exa1;
+        function exa2(){
+
+        }
+
+        function alea(){
+        var rd =(Math.random()*100);
+            var rd1 = Math.round(rd);
+            alert(rd1);
+        }
+
+        function aleac(){
+        var rd =(Math.random()*100);
+            var rd1 = Math.round(rd);
+            console.log(rd1);
+            paragraphe(rd1);
+        }
+        function pof(){
+        var p =(Math.random());
+            var f = Math.round(p);
+            console.log(f);
+            if(f==1){
+                alert("pile")
+            }else{
+                alert("face")
+            }
+        }
+        function has(){
+        var rd =(Math.random()*100);
+            var rd1 = Math.round(rd);
+            console.log(rd1);
+            alert(rd1)
+            if(rd1<16){
+        window.location.href = "./indexdoctor.html";
+        }else if(rd1<32){
+        window.location.href = "./doyrio.html";
+        }else if(rd1<48){
+        window.location.href = "./nom_de_dossier.html";
+        }else if(rd1<64){
+        window.location.href = "./coucou.html";
+        }else if(rd1<80){
+        window.location.href = "./coni.html";       
+        }else{
+        window.location.href = "./index.html";
+            }
+        }
+        function exo1(){
+            var nb1=prompt("nb1 ?");
+            var nb2=prompt("nb2 ?");
+            if(nb1<nb2){
+                alert(nb2+" est plus grand que "+nb1)
+            }else if(nb2<nb1){alert(nb1+" est plus grand que "+nb2)
+            }else{alert("ils sont égale")}
+        }
+        function exo2(){
+            var nb1=prompt("nb1 ?");
+            var nb2=prompt("nb2 ?");
+            var nb3=prompt("nb3 ?");
+            if(nb1<nb2){
+                if(nb2<nb3){
+                    alert("nb3 est le plus grand")
+                }else if(nb2>nb3){
+                    alert("nb2 est le plus grand")
+                }
+            }else if(nb1>nb3){
+                alert("nb1 est le plus grand")
+            }else{
+                alert("nb3 est le plus grand")
+            }
+        }
+        function exo3(){
+            var nb1=prompt("nombre ?");
+            if(nb1%2==0){
+                alert("il est pair")
+            }else{
+                alert("il est impair")
+            }
+        }
+        function exo4(){
+            var dt = new Date();
+            document.getElementById("date").innerHTML = dt;
+            
+        }
+        function exo6(){
+        var rd =(Math.random()*50);
+            var rd1 = Math.round(rd);
+            var rd2 =(rd1+150);
+            paragraphe(rd2);
+        }
+        function exo7(){
+        var rd =(Math.random()*2);
+            var rd1 = Math.round(rd);
+            if (rd1==0){
+                alert("je suis content")
+            }else if(rd1==1){
+                alert("je suis triste")
+            }else{
+                alert("je suis en colère")
+            }
+        }
+}
+
+    </script>
+</html>

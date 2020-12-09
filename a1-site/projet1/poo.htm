@@ -1,0 +1,221 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+	
+</head>
+<style>
+	body {
+		margin : 0;
+	}
+	
+	.hero {
+		width : 52px;
+		height : 72px;
+		background-image : url("ness.png");
+		background-position-x : 0px;
+		background-position-y : 0px;
+		position : absolute;
+		z-index: 20;
+		
+	
+	}
+	
+	.move-left{
+		background-position-y : -72px;
+		animation :  0.5s move infinite steps(3) alternate;
+	}
+	
+	.move-down{
+		background-position-y : 0px;
+		animation :  0.5s move infinite steps(3) alternate;
+	}
+	
+	.move-right{
+		background-position-y : -144px;
+		animation :  0.5s move infinite steps(3) alternate;
+	}
+	
+	.move-up{
+		background-position-y : -216px;
+		animation :  0.5s move infinite steps(3) alternate;
+	}
+
+	@keyframes move{
+		0% {
+			background-position-x : 0px;
+		}
+		100% {
+			background-position-x : -156px;
+		}
+	
+	}
+	.mur{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color:brown;
+    margin-top: 50px;
+    margin-left: 50px;
+	background-image: url(mur.png);
+}
+body{
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 481px;
+	width: 3584px;
+}
+</style>
+<body onkeydown="deplace(event)" onkeyup="repose(event)">
+</body>
+<script>
+	
+	class Perso {
+		
+		constructor(type){
+			this.div = document.createElement('div');
+            this.div.setAttribute("class","hero");
+			this.div.style.backgroundImage =`url("./img/${type}.png")`;
+			document.body.appendChild(this.div);
+		}
+		
+		moveLeft(){
+			this.div.setAttribute("class","hero move-left");
+			this.x = this.div.offsetLeft-1*speed;
+			this.div.style.marginLeft = this.x+"px";
+		}
+		
+		moveRight(){
+			this.div.setAttribute("class","hero move-right");
+			this.x = this.div.offsetLeft+1*speed;
+			this.div.style.marginLeft = this.x+"px";
+		}
+		
+		moveUp(){
+			this.div.setAttribute("class","hero move-up");
+			this.y = this.div.offsetTop-1*speed;
+			this.div.style.marginTop = this.y+"px";
+		}
+		
+		moveDown(){
+			this.div.setAttribute("class","hero move-down");
+			this.y = this.div.offsetTop+1*speed;
+			this.div.style.marginTop = this.y+"px";
+		}
+		
+		stopMove(){
+			this.div.setAttribute("class","hero");
+		}
+		
+		
+	}
+
+	var t2=["léo","antoine","loan","medhi","mathieu","alma","marie","luna","ines","audrey"]
+	var tab = [];
+	for (var i = 0;i<8;i++){
+        tab.push(new Perso(t2[i]));
+        
+	}
+	var selected = tab[0];
+	var speed = 4;
+    
+	function deplace(event){
+		if (event.keyCode>=96 && event.keyCode<=105){
+			selected = tab[event.key];
+		}
+		else if (event.keyCode==81){
+			var c=m.collision(selected)||m2.collision(selected);
+			if(c)selected.moveRight();
+			else selected.moveLeft();
+			c=m.collision(selected)||m2.collision(selected);
+			if(c)selected.moveRight();
+		}else if (event.keyCode==90) {
+			var c=m.collision(selected)||m2.collision(selected);
+			if(c)selected.moveDown();
+			else selected.moveUp();
+			c=m.collision(selected)||m2.collision(selected);
+			if(c)selected.moveDown();
+		}else if (event.keyCode==68) {
+			var c=m.collision(selected)||m2.collision(selected);
+			if(c)selected.moveLeft();
+			else selected.moveRight();
+			c=m.collision(selected)||m2.collision(selected);
+			if(c)selected.moveLeft();
+		}else if (event.keyCode==83) {
+			var c=m.collision(selected)||m2.collision(selected);
+			if(c)selected.moveUp();
+			else selected.moveDown();
+			c=m.collision(selected)||m2.collision(selected);
+			if(c)selected.moveUp();
+		}
+	}
+	
+	function repose(event){
+		var perso = document.getElementById("toto");
+		
+		if (event.keyCode>=68 && event.keyCode<=90){
+			selected.stopMove();
+
+		}
+	}
+	var nameMap=["253","mario","marioall","grass"]
+	class map{
+		constructor(mop){
+			document.body.style.backgroundImage="url("+mop+".png";
+		}
+		changeMap(mop){
+			document.body.style.backgroundImage="url("+mop+".png";
+		}
+		
+	}
+
+	class Mur {
+		constructor(x,y,width,height){
+			this.x = x;
+			this.y = y;
+			this.width = width;
+			this.height = height;
+			this.div = document.createElement("div");
+			this.div.setAttribute("class","mur");
+			this.div.style.marginLeft = x+"px";
+			this.div.style.marginTop = y+"px";
+			this.div.style.width = width+"px";
+			this.div.style.height = height+"px";
+			this.div.style.position = "absolute";
+			this.div.style.backgroundImage = "url(mur.png)";
+			document.body.appendChild(this.div);
+		}
+		
+		//Retourne vrai si le perso est en collision avec le mur faux sinon
+		collision(perso){
+			var p1x = perso.x;
+			var p1y = perso.y+60;
+			
+			var p2x = perso.x+50;
+			var p2y = perso.y+60;
+			
+			var p3x = perso.x+50;
+			var p3y = perso.y+72;
+			
+			var p4x = perso.x;
+			var p4y = perso.y+72;
+			
+			return  rectangleContient(this,p1x,p1y)
+				 || rectangleContient(this,p2x,p2y)
+				 || rectangleContient(this,p3x,p3y)
+				 || rectangleContient(this,p4x,p4y);
+		}
+	}
+	
+	//Retourne vrai si le point (px,py) est dans le rectangle faux sinon
+	function rectangleContient(rect,px,py){
+		return px>rect.x+1 && px<(rect.x+1+rect.width+1) && py>rect.y+1 && py<(rect.y+1+rect.height+1);
+	}
+	
+	var m = new Mur(600,80,80,600);
+	var m2 = new Mur(80,80,600,80);
+	var mop =new map(nameMap[3]);
+	
+</script>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>poo</title>
+</head>
+<body>
+    <button onclick="crpo()">poo</button><br><br>
+    <input type="text" placeholder="x" id="m"><p>@_@</p><input type="text" placeholder="y" id="n"><br><br>
+    <input type="text" placeholder="tx" id="o"><p>^°^</p><input type="text" placeholder="ty" id="p">
+</body>
+<style>
+.mur{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color:blanchedalmond;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+</style>
+<script>
+class mure{
+    constructor(x1,y1,x2,y2){
+        this.x=x1;
+        this.y=y1;
+        this.xb=x2;
+        this.yb=y2;
+    }
+    dessine(){
+        var dev1=document.getElementById("m")
+        var dev2=document.getElementById("n")
+        var dev3=document.getElementById("o")
+        var dev4=document.getElementById("p")
+        this.x=dev1.value;
+        this.y=dev2.value;
+        this.xb=dev3.value;
+        this.yb=dev4.value;
+       var div=document.createElement("div");
+        div.setAttribute("class","mur");
+        div.style.width=this.yb+"px";
+        div.style.height=this.xb+"px";
+        document.body.appendChild(div);
+        div.style.marginLeft=this.x+"px";
+        div.style.marginTop=this.y+"px";
+    }
+}
+function crpo(){
+    var p=new mure();
+    p.dessine()
+}
+</script>
+</html>

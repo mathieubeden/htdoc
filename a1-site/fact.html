@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>factor</title>
+</head>
+<style>
+.menu{
+ transform: rotateY(-90deg);
+ transform-origin: left;
+ transition: 1s;
+}
+.manu{
+    transform: rotateY(0deg);
+ transform-origin: left;
+ transition: 0.7s;
+}
+#menu{
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    width: 20%;
+    height: 100%;
+    color: white;
+    background-color: rgb(255, 51, 0);
+    padding: 5px;
+}
+#m{
+    right: 0px;
+    display: block;
+    position: fixed;
+}
+canvas{
+    border: 1px solid black;
+}
+</style>
+
+<body style="margin: 0px;">
+    
+    <button style="position: fixed;margin: 25px;" onclick="svitch()">menu</button>
+    <div id="menu" class="menu">
+        <button id="m" onclick="saitch()">X</button>
+        <a href="./index.html">retour a l'index</a>
+        <p>ceci est un model d'avion utilisant en partit  son propre fuselage comme aile et il fonctione vraiment
+            il a été concu comme la navette spatial car a la base il devais servir pour revenir de l'iss.
+        </p>
+        
+        <p>
+            quand j'ai éssayé de refaire de tête le script de factorisation j'ai tres vite rencontré un probleme...
+            a partir de trois ca tendait vers l'infini j'ai donc rajouté une div qui était definie sur le 
+            nombre de base et qui lui ne changerait pas dans le for. et hop ! problem résolu !
+        </p>
+        <p> factotisation max : 171. <button onclick="fact()">fact</button></p>
+        <button onclick="ph()">flasher le dessin</button><br>
+        <img src="./200px-Rotating_earth_(large).gif" alt="earth">
+        <img src="./200px-Newtons_cradle_animation_book_2.gif" alt="new">
+    </div>
+    <img src="./mig.jpg" alt="mig" style="width: 100%;">
+    <img src="" id="0" alt="">
+    <img src="" id="1" alt="">
+    <img src="" id="2" alt="">
+    <img src="" id="3" alt="">
+    <img src="" id="4" alt="">
+    <img src="" id="5" alt="">
+    <img src="" id="6" alt="">
+    <img src="" id="7" alt="">
+    <img src="" id="8" alt="">
+    <img src="" id="9" alt="">
+    <canvas width="700"  height="600"id="can" onmouseup="fal()" onmousedown="tru(event)" onmousemove="can(event)"></canvas>
+</body>
+<script>
+var div = document.getElementById("menu");
+function svitch(){
+    console.log("ban")
+    div.setAttribute("class","manu")
+}
+function saitch(){
+    console.log("ben")
+    div.setAttribute("class","menu")
+}
+var a=0
+function ph(){
+    var can=document.getElementById("can");
+    var data=can.toDataURL();
+    console.log(data);
+    var img=document.getElementById(""+a+"")
+    img.setAttribute("src",data);
+    a++
+
+}
+function can(event){
+    if(drag){
+    var x=event.offsetX;
+    var y=event.offsetY;
+    var el= document.getElementById("can");
+    var ctx=el.getContext("2d");
+    ctx.fillRect(x-2,y-2,5,5);
+}}
+var drag=false;
+function tru(event){
+drag=true;
+var x=event.offsetX;
+var y=event.offsetY;
+var el= document.getElementById("can");
+var ctx=el.getContext("2d");
+ctx.fillRect(x-2,y-2,5,5);
+}
+function fal(){
+drag=false
+}
+
+
+var nb=1;
+function fact(){
+    var nb=prompt("facteur de...");
+    var na=nb;
+    nb=1;
+    for(var i=1;i<na;i++){
+        nb=i*nb;
+        console.log(nb);
+    }
+    alert(nb);
+}
+</script>
+</html>

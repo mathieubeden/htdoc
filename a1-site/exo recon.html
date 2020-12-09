@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>matrix</title>
+</head>
+<body>
+    <button onclick="toBanary()">binary</button>/<button onclick="totanary()">ternary</button>/<button onclick="toquinary()">quantary</button>/<button onclick="topennary()">pennary</button>/<button onclick="to16()">base 16</button>
+    <h1><input type="number" id="chif"></h1>
+</body>
+<style>
+    body{
+        background-image: url("./matrix.gif");
+        color: aliceblue;
+    }
+</style>
+<script>
+    var tab = [[Math.floor(Math.random()*50),Math.floor(Math.random()*50),Math.floor(Math.random()*50),Math.floor(Math.random()*50),Math.floor(Math.random()*50),Math.floor(Math.random()*50),Math.floor(Math.random()*50)],[Math.floor(Math.random()*50),Math.floor(Math.random()*50),Math.floor(Math.random()*50),Math.floor(Math.random()*50),Math.floor(Math.random()*50),Math.floor(Math.random()*50),Math.floor(Math.random()*50)],[Math.floor(Math.random()*50),Math.floor(Math.random()*550),Math.floor(Math.random()*50),Math.floor(Math.random()*50),Math.floor(Math.random()*50),Math.floor(Math.random()*50),Math.floor(Math.random()*50)],[Math.floor(Math.random()*50),Math.floor(Math.random()*50),Math.floor(Math.random()*50),Math.floor(Math.random()*50),Math.floor(Math.random()*50),Math.floor(Math.random()*50),Math.floor(Math.random()*50)]];
+    var res = 0;
+    for (var i = 0; i < tab.length; i++) {
+        for (var j = 0; j < tab[i].length; j++) {
+        res += tab[i][j];
+        }   
+    }
+    document.body.innerHTML += "<h1>la matrice est égale à "+res+"</h1>";
+    console.log(res);
+
+    function toBinary(nb){
+        var string="";
+        while(nb>1){
+            string+=(Math.floor(nb%2));
+            nb=Math.floor(nb/2);
+        }
+        return string
+    }
+    function toBanary(){
+        var nb=document.getElementById("chif").value;
+        var string=toBinary(nb);
+        console.log(string);
+        console.log("ce qui équivaut à "+string.length+" bits");
+    }
+
+    function totinary(nb){
+        var string="";
+        while(nb>1){
+            string+=(Math.floor(nb%3));
+            nb=Math.floor(nb/3);
+        }
+        return string
+    }
+    function totanary(){
+        var nb=document.getElementById("chif").value;
+        var string=totinary(nb);
+        console.log(string);
+        console.log("ce qui équivaut à "+string.length+" trits");
+    }
+
+    function toquinory(nb){
+        var string="";
+        while(nb>1){
+            string+=(Math.floor(nb%4));
+            nb=Math.floor(nb/4);
+        }
+        return string
+    }
+    function toquinary(){
+        var nb=document.getElementById("chif").value;
+        var string=toquinory(nb);
+        console.log(string);
+        console.log("ce qui équivaut à "+string.length+" quantrits");
+    }
+
+    function topennory(nb){
+        var string="";
+        while(nb>1){
+            string+=(Math.floor(nb%5));
+            nb=Math.floor(nb/5);
+        }
+        return string
+    }
+    function topennary(){
+        var nb=document.getElementById("chif").value;
+        var string=topennory(nb);
+        console.log(string);
+        console.log("ce qui équivaut à "+string.length+" pentits");
+    }
+    function toseize(nb){
+        var string="";
+        while(nb>1){
+            var nam= Math.floor(nb%16);
+            if(nam==10)nam="a"
+            else if(nam==11)nam="b"
+            else if(nam==12)nam="c"
+            else if(nam==13)nam="d"
+            else if(nam==14)nam="e"
+            else if(nam==15)nam="f"
+            string+=nam;
+            nb=Math.floor(nb/16);
+        }
+        return string
+    }
+    function to16(){
+        var nb=document.getElementById("chif").value;
+        var string=toseize(nb);
+        console.log(string);
+    }
+    
+</script>
+</html>

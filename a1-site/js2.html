@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>{
+        var rd =(Math.random()*100);
+            var rd1 = Math.round(rd);
+            alert(rd1);
+            if(rd1<40){
+                alert("retour a l'envoyeur")
+                window.location.href = "./index.html";
+            }
+        }
+    </script>
+    <h1><a href="./index.html">gogo</a></h1>
+</body>
+<script>
+    var poi=prompt("combient pèse tu ?");
+    var tai=prompt("quelle est ta taille ?");
+    var imc=(poi/(tai*tai));
+    var imc1 = Math.round(imc);
+    alert("tu as une imc de "+imc1+". ce qui corespond à...");
+    if(imc1<18.5){
+        alert("une insuffisance pondérale.");
+    }else if(imc1<25){
+        alert("une corpulence normale.");
+    }else if(imc1<30){
+        alert("un surpoid.");
+    }else if(imc1<35){
+        alert("une obésité modérée.");
+    }else if(imc1<40){
+        alert("une obésité sévére.");       
+    }else{
+        alert("une obésité morbide ou massive.");
+    }
+
+</script>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script src="./mots.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>joue au pendu</title>
+</head>
+<style>
+    #mot{
+        display: none;
+    }.div2{
+        display: inline-block;
+        margin-left: 3px;
+    }.perdu{
+        position: absolute;
+        margin-left: 200px;
+    }
+</style>
+<body>
+    <button onclick="pendu()">Démarrer</button>
+    <input onkeyup="check(event)" />
+    <div id="mot"></div><br>
+    <img src="./sat.gif" alt="sat">
+</body>
+<script type="text/javascript">
+     var tabp = [];
+     var div3 = document.createElement("div");
+     document.body.appendChild(div3);
+    div3.style.height = "1024px";
+    div3.style.width = "1024px";
+    div3.style.backgroundRepeat = "no-repeat";
+    div3.style.backgroundColor = "white";
+    div3.setAttribute("class","perdu");
+    
+    function pendu(){
+        var body = document.getElementsByTagName("body")[0];
+        var div = document.getElementById("mot");
+        var rdm =  Math.floor(Math.random()*mots.length);
+        var mot = div.innerHTML = mots[rdm];
+        var motp = div.innerText.length;
+        console.log(motp);
+        var tab = [];
+        for (var i = 0; i<mot.length;i++){
+            tab.push(mot[i]);
+        }
+        console.log(tab);
+        for (var i = 0; i<motp;i++){
+        tabp.push("_");
+        }
+        console.log(tabp);
+        for (var i = 0; i<tabp.length;i++){
+        var a = 0;
+        var div2 = document.createElement("div");
+        var text = document.createTextNode(tabp[a]);
+        body.appendChild(div2);
+        div2.appendChild(text);
+        div2.setAttribute("class","div2");
+        div2.setAttribute("name",mot[i]);
+        a+=1;
+        }
+        
+    }
+    var noob = 0;
+    function check(event){
+        var body = document.getElementsByTagName("body")[0];
+        var input = document.getElementsByTagName("input")[0];
+        var value = input.value;
+            
+        if(event.keyCode==13){
+            var tabdiv = document.getElementsByName(value);
+            console.log(tabdiv);
+            for (var i = 0; i<tabdiv.length;i++){
+                tabdiv[i].innerHTML = value;
+            }
+            input.setAttribute("value","");
+            if(tabdiv.length==0){
+                noob++;
+                div3.style.backgroundImage = "url('./"+noob+".jpg')";
+                if(noob==9){
+                    alert("perdu");
+                }
+            }input.value = "";
+
+        }
+    }
+    
+</script>
+</html>

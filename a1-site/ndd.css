@@ -1,0 +1,121 @@
+@font-face {
+  font-family: 'monsera-b';
+  src: url(./coucou/Montserrat-Bold.otf);
+}
+
+@font-face {
+  font-family: 'monsera-l';
+  src: url(./coucou/Montserrat-Light.otf);
+}
+
+@font-face {
+  font-family: 'monsera-r';
+  src: url(./coucou/Montserrat-Regular.otf);
+}
+
+body {
+  font-family: 'monsera-r';
+  margin: 0px;
+}
+
+#top {
+  background-color: black;
+}
+
+#currency {
+  padding-top: 10px;
+  margin-left: 10%;
+  padding: 10px;
+}
+
+#menu {
+  position: absolute;
+  right: 10%;
+  top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.active {
+  background-color: cyan;
+  margin-left: 50px;
+}
+
+.item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#top {
+  color: gray;
+}
+#avfash {
+  display: inline-block;
+  font-size: 25px;
+}
+
+#shop {
+  display: inline-block;
+  padding: 15px;
+  border: thin black 7px;
+}
+
+#shop1 {
+  display: inline-block;
+  padding: 15px;
+  border: thin black 7px;
+  margin-left: 21%;
+}
+
+#srch {
+  display: inline-block;
+  margin-left: 7%;
+  border: 1px solid black;
+  padding: 3px;
+}
+
+#shop_bleu {
+  display: inline-block;
+  padding: 25px;
+}
+
+#utop {
+  border: block start;
+  border: 1px;
+  padding: 15px 0px 15px 15px;
+  border-block: 1px;
+  border-color: black;
+  width: 95%;
+}
+
+#bkgsld {
+  background-image: url(./ndd/bkg.png);
+  width: 100%;
+  height: 450px;
+  background-position: center;
+  text-align: centers;
+}
+
+#titl {
+  padding-left: 10%;
+  padding-top: 8%;
+  font-size: 45px;
+  color: aliceblue;
+}
+
+#titla {
+  padding-left: 6%;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+#look {
+  height: 450px;
+  width: 500px;
+  margin-left: 65%;
+  margin-top: -320px;
+  background-color: white;
+  border: 1px solid gray;
+}
+/*# sourceMappingURL=ndd.css.map */

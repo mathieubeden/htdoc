@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>video</title>
+</head>
+<style>
+#pp{
+    width: 400px;
+    height: 400px;
+    top: 45px;
+    left: 45px;
+    background-color: black;
+    opacity: 1;
+    z-index: 0;
+    position: absolute;
+} 
+#vdo{
+    z-index: 2;
+    opacity: 1;
+    background-color: black;
+}   
+</style>
+<body>
+    <div id="pp" ><img width="780px" height="400px" onclick="pp()" src="../bobi.gif" alt="bebi"></div>
+    <video id="video" onclick="pp()" loop>maybe
+        <source src="../badas.webm">
+           
+    </video> 
+    <p>cliquez pour m'arreter ou me lancer</p>
+</body>
+<script>
+    var bool=true
+function pp(){
+    var v=document.getElementById('video');
+    var p=document.getElementById('pp');
+    if(bool){
+        v.play();
+        p.style.opacity='0';
+        p.style.zIndex='0';
+        bool=false;
+        console.log("play")
+    }else{
+        v.pause();
+        p.style.opacity='1';
+        p.style.zIndex='3';
+        console.log("pause")
+        bool=true;
+    }
+
+}
+
+
+</script>
+</html>

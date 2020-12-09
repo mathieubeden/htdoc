@@ -7,7 +7,7 @@ class Manager{
         $this->base = $base;
         $this->date = date("d/m/Y à H:i");
     }
-    public function insert_art($article){
+    public function insert_art($article){//insertion de l'article dans la base de données
 
         $sql="INSERT INTO blog (titre,comm,user,date) VALUES (:titre,:comm,:user,:date)";
         $resultat = $this->base->prepare($sql);

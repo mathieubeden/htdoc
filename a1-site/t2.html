@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <title>exo js no 1</title>
+    <link rel="stylesheet" href="test.css">
+    <link href="./demarrage.js">
+</head>
+<script>
+       /*{ var boite = document.querySelector('div'); // variable objet
+       function horloge() 
+       {
+          var heure =new Date();
+          document.getElementById("date").innerHTML = heure;
+       }
+       setInterval("horloge()", 100);}*/
+</script>
+<body>
+    <a href="./index.html">index</a>
+    <h1>test</h1>
+    <p>feuille de style en scss</p>
+    <p>alea est comme un dés de 100.</p>
+    <input type="button" value="alea" onclick="alea();"><br>
+    <input type="button" value="page aléatoire" onclick="has();"><br>
+    <p>ce bouton t'envoi ver une de mes page au hasard.(conçu pour l'index)</p>
+    <input type="button" value="pile ou face ?" onclick="pof();"><br>
+    <p>lui par contre c'est un pile ou face.</p>
+    
+    <input type="button" value="exo1" onclick="exo1();"><br>
+    <input type="button" value="exo2" onclick="exo2();"><br>
+    <input type="button" value="exo3" onclick="exo3();"><br>
+    <input type="button" value="exo4" onclick="exo4();"><br>
+    <input type="button" value="exo5" onclick="exo5();"><br>
+    <input type="button" value="exo6" onclick="exo6();"><br>
+    <input type="button" value="exo7" onclick="exo7();"><br>
+    <div id="para">
+
+    </div>
+</body>
+<script src="./demarrage.js"></script>
+<script src="./test.js"></script>
+<script>
+{
+        function alea(){
+        var rd =(Math.random()*100);
+            var rd1 = Math.round(rd);
+            alert(rd1);
+        }
+
+        function aleac(){
+        var rd =(Math.random()*100);
+            var rd1 = Math.round(rd);
+            console.log(rd1);
+            paragraphe(rd1);
+        }
+        function pof(){
+        var p =(Math.random());
+            var f = Math.round(p);
+            console.log(f);
+            if(f==1){
+                alert("pile")
+            }else{
+                alert("face")
+            }
+        }
+        function has(){
+        var rd =(Math.random()*100);
+            var rd1 = Math.round(rd);
+            console.log(rd1);
+            alert(rd1)
+            if(rd1<16){
+        window.location.href = "./indexdoctor.html";
+        }else if(rd1<32){
+        window.location.href = "./doyrio.html";
+        }else if(rd1<48){
+        window.location.href = "./nom_de_dossier.html";
+        }else if(rd1<64){
+        window.location.href = "./coucou.html";
+        }else if(rd1<80){
+        window.location.href = "./coni.html";       
+        }else{
+        window.location.href = "./index.html";
+            }
+        }
+        function exo1(){
+            for(var i=0;i<10;i++){
+                alert ("bonjour")
+            }
+        }
+        function exo2(){
+            var h=prompt("nombre de fous que bj sera affiché")
+            for(var i=0;i<h;i++){
+                alert ("bonjour "+(i+1))
+            }
+        }
+        function exo3(){
+            var g=prompt("nombre ?") 
+            while(mathFloor(g)!=g){
+                alerte ("il n'est pas entier")
+                var g=prompt("nombre ?") 
+            }
+            alert("bravo")
+        }
+        function exo4(){
+            var chiffre = (Math.floor(Math.random()*1000));
+        var choix = parseInt(prompt("devine mon chiffre !"));
+        var coup = 0;
+        while (choix != chiffre)
+        {
+        if (choix < chiffre){
+        alert("non. C'est plus grand");
+        }
+        else {
+        alert("non. C'est plus petit");
+        }  
+        coup = coup + 1;
+        choix = parseInt(prompt("Saisissez un chiffre stp"));
+        }
+        alert("Bravo");
+        alert(coup);
+        }
+        function exo5(){
+            var r=prompt("que vais-je écrire ?")
+            for(var i=0;i<10;i++){
+                paragraphe(r)
+            }
+        }
+        function exo6(){
+            var io=prompt("j'écris quoi?")
+            var t=prompt("combien de fois?")
+            for(var i=0;i<t;i++){
+            paragraphe(io)
+        }
+        }
+        function exo7(){
+            var lo=(prompt("nombre ?"))
+            while(lo%2==0){
+                alert(lo+" est pair.");
+                var lo=(prompt("nombre ?"))
+            }
+        }
+        var mdp=prompt("le chifre de passe ?")
+        while(mdp!=1234)
+        mdp=prompt("mdp incorect. le chifre de passe ?")
+}
+
+    </script>
+</html>

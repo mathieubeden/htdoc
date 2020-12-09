@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brun inexistant</title>
+</head>
+<body style="background-color: white;">
+    
+    <div onclick="swbrun()" id="brun">orange</div>
+</body>
+<style>
+
+#brun{
+    background-color: #814000;
+    width:  500px;
+    height: 500px;
+    margin-top: 15%;
+    margin-left: 30%;
+    display: inline-block;
+}
+
+</style>
+<script>
+var sw=1;
+function swbrun(){
+    if(sw==1){
+        document.body.style="background-color: black;";
+        sw=0;
+    }else{
+        document.body.style="background-color: white;";
+        sw=1;
+    }
+}
+
+</script>
+</html>

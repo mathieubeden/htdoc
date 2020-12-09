@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <title>dessin point</title>
+    <link rel="stylesheet" href="test.css">
+    <link rel="shortcut icon" href="./téléchargement (1).jpg" type="image/x-icon">
+</head>
+<style>
+    body{
+        margin: 0px;
+    }
+    #pan{
+        width: 100%;
+        height: 100vh;
+        bottom: 0px;
+    }
+    #co{
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        color: burlywood !important;
+    }
+    #di{
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        color: burlywood !important;
+    }
+    .cercle{
+        width: 10px;
+        height: 10px;
+        border-radius: 20px;
+        background-color: rgb(0, 255, 0);
+        position: absolute;
+    }
+    .mots{
+        position: relative;
+        top:-500px;
+    }
+    p{
+        position: relative;
+        top:-500px;
+    }
+</style>
+<body onmousemove="dep(event)">
+    <div id="pan"onclick="cilc(event)">
+        <div id="co"></div>
+        <div id="di"></div>
+        <button onclick="console.log (caré(789))">carré</button>
+        <button onclick="console.log (distance(10,15,80,60))">distance co</button>
+        <button onclick="rgbo()">banane</button>
+        <button onclick="mono()">monop</button>
+        <button onclick="momo()">momo</button>
+        <br><br>
+        <a href="./index.html">retour a l'index</a>
+        
+    </div>
+</body>
+<script src="./demarrage.js"></script>
+<script src="./test.js"></script>
+<script src="./mots.js"></script>
+<script>
+    var x;
+    var y;
+    function cilc(event){
+        x=event.x;
+        y=event.y;
+        document.body.innerHTML += "<div class='cercle' style='top:"+(y-5)+"px;left:"+(x-5)+"px;'></div>";
+    }
+    function caré(x){
+        return (x*x);
+    }
+
+    function distance(k,t,w,z){
+        var prout = Math.sqrt(((k-t)*(k-t))+((w-z)*(w-z)));
+        return (prout);
+    }
+    console.log (caré(789));
+    console.log (distance(10,15,80,60));
+
+    function dep(event){
+        var xy =(event.x+", "+event.y)
+        var divc = document.getElementById("co");
+        divc.innerHTML = "("+xy+")";
+        var divd=document.getElementById("di");
+
+        if(x&&y){
+            divd.innerHTML=distance(event.x,event.y,x,y);
+        }
+    }
+    function rgbo(){
+        var rd1 =Math.floor(Math.random()*4);
+        var tab=["red","green","blue","orange"];
+        if(rd1==0){
+            paragraphe(tab[0]);
+        }else if(rd1==1){
+            paragraphe(tab[1]);
+        }else if(rd1==2){
+            paragraphe(tab[2]);
+        }else if(rd1==3){
+            paragraphe(tab[3]);
+        }
+    }
+    function mono(){
+        var tab=[0,0,0,0,0,0,0,0,0,0,0,0,0];
+        for(tab[0]=0; tab[0]<1000; tab[0]++){
+        var rd1 =Math.ceil(Math.random()*6);
+        var rd2 =Math.ceil(Math.random()*6);
+        var rd3=(rd1+rd2)
+        tab[rd3]++
+    }
+    paragraphe("pour "+tab[0]+" lancé de deux dés de 6 il y a "+tab[1]+" fois 1, "+tab[2]+" fois 2, "+tab[3]+" fois 3, "+tab[4]+" fois 4, "+tab[5]+" fois 5, "+tab[6]+" fois 6, "+tab[7]+" fois 7, "+tab[8]+" fois 8, "+tab[9]+" fois 9, "+tab[10]+" fois 10, "+tab[11]+" fois 11, "+tab[12]+" fois 12, ");
+    console.log(tab);
+    }
+    function momo(){
+        var rd6 =Math.ceil(Math.random()*mots.length);
+        console.log(mots[rd6]);
+        var re=mots[rd6];
+        var div=document.createElement("div");
+        div.innerHTML=re;
+        div.setAttribute("class", "mots");
+        document.body.appendChild(div);
+        
+    }
+    </script>
+    
+</html>

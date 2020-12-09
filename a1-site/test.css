@@ -1,0 +1,75 @@
+body {
+  -webkit-animation: dia 1000s ease-in-out infinite both;
+          animation: dia 1000s ease-in-out infinite both;
+  background-size: auto;
+  -webkit-transition: 5s;
+  transition: 5s;
+}
+
+h1 {
+  color: red;
+}
+
+h2 {
+  color: red;
+}
+
+.element {
+  display: inline;
+}
+
+a {
+  color: white;
+  font-size: 37.5px;
+}
+
+@-webkit-keyframes dia {
+  0% {
+    background-image: url(./proton.jpg);
+  }
+  20% {
+    background-image: url(./mu.jpg);
+  }
+  40% {
+    background-image: url(./mig.jpg);
+  }
+  60% {
+    background-image: url(./proton.jpg);
+  }
+  80% {
+    background-image: url(./mu.jpg);
+  }
+  100% {
+    background-image: url(./mig.jpg);
+  }
+}
+
+@keyframes dia {
+  0% {
+    background-image: url(./proton.jpg);
+  }
+  20% {
+    background-image: url(./mu.jpg);
+  }
+  40% {
+    background-image: url(./mig.jpg);
+  }
+  60% {
+    background-image: url(./proton.jpg);
+  }
+  80% {
+    background-image: url(./mu.jpg);
+  }
+  100% {
+    background-image: url(./mig.jpg);
+  }
+}
+
+p {
+  color: white;
+}
+
+div {
+  color: white;
+}
+/*# sourceMappingURL=test.css.map */

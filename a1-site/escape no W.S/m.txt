@@ -1,0 +1,4 @@
+Menu : bold + Fleche ok
+Menu dans la page : couleur et police ok
+Pagination qui doit ressembler ok
+Footer qui doit avoir les meme polices ok

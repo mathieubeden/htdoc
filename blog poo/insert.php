@@ -2,7 +2,7 @@
 
 include('./article.php');
 include('./manager.php');
-if($_COOKIE['user']!==$_POST['user']){
+if($_COOKIE['user']!==$_POST['user']){//si c'est  pas le bon login
     header('location:connect.php');
 }
 $article=new Article();
@@ -46,12 +46,13 @@ if(isset($_POST)){//inser l'article dans la base de donnée
             $base = new PDO('mysql:host=127.0.0.1;dbname=blogoo', 'root', ''); //recupération des id's pour recupérer l'id de l'article
             $base->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
             // Récupèration des données de la table Personne
-            $resultat = $base->query('SELECT id FROM blog');
+            $resultat = $base->query('SELECT MAX(id) FROM blog ');
             
             // Affichage de chaques entrées une à une
             while ($donnees = $resultat->fetch())
             {
-                $id=$donnees['id'];
+                $id=$donnees['MAX(id)'];
+               
             }
             $resultat->closeCursor(); // Fermeture de la requête
             }
@@ -66,7 +67,7 @@ if(isset($_POST)){//inser l'article dans la base de donnée
                 $_FILES['photo']['name']=$id.'.jpg';// renomage de la photo par l'id de l'article
                 move_uploaded_file($_FILES['photo']['tmp_name'],
                 $chemin_destination.$_FILES['photo']['name']);
-                header('location:insertion.php');
+                header('location:insertion.php'); 
             }
             else {//si sa merde
                 echo "Le fichier n'a pas pu être copié dans le répertoire fichiers.<br>";

@@ -1,0 +1,251 @@
+/*fini*/
+@font-face{
+    font-family: 'monsera-b';
+    src: url(./coucou/Montserrat-Bold.otf)
+}
+@font-face{
+    font-family: 'monsera-l';
+    src: url(./coucou/Montserrat-Light.otf)
+}
+@font-face{
+    font-family: 'monsera-r';
+    src: url(./coucou/Montserrat-Regular.otf)
+}
+
+@media screen (max-width:900px){
+    #ak{
+        display: block;
+    }
+    #n{
+        size: 50%;
+        display: inline-block;
+        right: 10%;
+        margin: 15px;
+        padding-top: 20px;
+    }
+    #nddt{
+        display: table-column;
+        width: 50%;
+    }
+    #n2{
+        width: 50%;
+    }
+}
+@media screen (min-width:750px){
+    
+    }
+#eif{
+    background-image: url(./coucou/img.png);
+    width: 100%;
+    height: 700px;
+    background-repeat : no-repeat;
+	background-size : cover;
+	background-position : center;
+    background-attachment : fixed;
+    color: white;
+    transition :  1.0s;
+}
+body{
+    font-family: 'monsera-l';
+    transition :  1.0s;
+}
+#ok{
+    font-family: 'monsera-b';
+    font-size: 30px;
+    margin-left: 5%;
+    display: inline-block;
+    margin-top: 3%;;
+    transition :  1.0s;
+    cursor: pointer;
+}
+#ak{
+    width: 60%;
+    word-spacing: 15px;
+    display: inline-block;
+    top: 5%;
+    left: 245px;
+    padding-left: 2%;
+    cursor: pointer;;
+    transition :  1.0s;
+}
+.button {
+    font-size : 25px;
+    font-family : 'monsera-r';
+    border : 2px solid white;
+    text-align: center;
+    display : inline-block;
+    width : 150px;
+    height : 55px;
+    top : 25px;
+    box-sizing : border-box;
+    right : 5%;
+    transition :  0.5s;
+    border-radius: 6px;
+    cursor: pointer;
+    position: absolute;
+    padding-top: 10px;
+    display: inline-block;
+}
+.button:hover {
+    background-color : white;
+    color : rgb(42,38,67);
+    transition :  0.5s;
+}
+h1{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20%;
+    transition :  1.0s;
+}
+h3{
+    text-align: center;
+    font-size: 25px;
+    transition :  3.0s;
+}
+#ind{
+    color: white;
+}
+li{display: inline-block}
+input{display: inline-block}
+#nav{
+    background-color: white;        
+    font-size: 13px;   
+    font-weight: normal;   
+    letter-spacing: 2px;   
+    color: #ffffff;
+    display: inline-block;
+    transition :  1.0s;
+}
+#ff{
+    padding-right: 50px;
+}
+section{
+    position: relative;
+    display: inline-block;
+    left:18%;
+}
+#m{
+    margin: 20px;
+    position: relative;
+    left:15%;;
+    transition :  1.0s;
+    cursor: pointer;
+    width:70%;
+}
+#m:hover{
+    background-color: rgb(205, 216, 226);
+}
+#n{
+    size: 80%;
+    display: inline-block;
+    right: 10%;
+    margin: 15px;
+    padding-top: 20px;;
+    transition :  1.0s;
+    cursor: pointer;
+}
+
+#e{
+    width: 70%;
+    margin-top: 50px;
+    display: inline-block;
+    transition :  1.0s;
+    width:90%;}
+
+#kkk{
+    width: 80%;
+    position: relative;
+    display:block;
+    left: 14%;
+    margin: 15px;
+    transition :  1.0s;
+    width:90%;
+}
+#all{
+    right: 15%;
+    display: inline-block;
+    padding-top: 10px;
+    transition :  1.0s;
+    width: 150px; /*ca ne veut pass aller a droite*/
+    cursor: pointer;
+    width:90%;
+}
+#rifi{
+    background-color:red;  
+    border-style: solid;  
+    border-width: 1px;   
+    border-color:red;   
+    padding: 10px 10px 10px 10px;   
+    width: 98.5%;   
+    box-sizing: border-box;  
+    font-size: 13px;   
+    font-weight: normal;   
+    letter-spacing: 2px;     
+    text-transform: uppercase;
+    color: #ffffff;
+    transition :  2.0s;
+}
+#a4{
+    padding: 9px 9px 10px 10px; 
+    width:90%;
+}
+#k{
+    width: 70%;
+    margin-top: 50px;
+    display: inline-block;
+    transition :  1.0s;
+    margin-left: 15%;
+    width:90%;
+}
+#at1{
+    display:block;
+    left: 30%;
+    margin-left: 15%;
+    margin-top: 3%;
+    transition :  2.0s;
+}
+#nddt{
+    padding-right: 2%;
+    display: inline-block;
+    scale: 50%;
+    cursor: pointer;
+}
+#at2{
+    display:block;
+    left: 31%;
+    margin-left: 15%;
+    margin-top: 1%;
+    transition :  2.0s;
+    cursor: pointer;
+}
+#n2{
+    display:block;
+    right: 10%;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    transition :  1.0s;
+    cursor: pointer;
+}
+#trip{
+    width: 70%;
+    margin-top: 50px;
+    display: inline-block;
+    transition :  2.0s;
+    margin-left: 15%;
+    width:90%;
+}
+#end{
+    margin-top: 50px;
+    display: block;
+    transition :  2.0s;
+    margin-left: 12%;
+    width: 70%;
+    width:90%;
+}
+#end1{
+    display: inline-block;
+    cursor: pointer;
+    padding-top:10px !important;
+    border: 1px;
+    margin:5%;
+}

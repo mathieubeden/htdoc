@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exo feuille</title>
+</head>
+<style>
+    body{
+    background-image: url(./proton.jpg);
+    background-position-x: center;
+    background-size: cover;
+    }
+</style>
+<body>
+    <h1><a href="./index.html">retour a l'index</a></h1><br>
+    <button onclick="e1()">1</button>
+    <button onclick="e2()">2</button>
+    <button onclick="e3()">3</button>
+    <button onclick="e4(a)">4</button>
+    <button onclick="e5(a)">5</button>
+    <button onclick="e6(a)">6</button>
+    <button onclick="e7()">7</button>
+    <button onclick="e8()">8</button>
+    <button onclick="e9()">9</button>
+    <button onclick="e10()">10</button>
+    <button onclick="e11()">11</button>
+    <button onclick="e12()">12</button>
+    <button onclick="e13()">13</button>
+    <button onclick="e14()">14</button>
+    <button onclick="e15()">15</button>
+    <button onclick="e16()">16</button>
+    <button onclick="e17()">17</button>
+    <button onclick="e18()">18</button>
+    <button onclick="e19()">19</button>
+    <button onclick="e20()">20</button>
+    <br><br>
+    <h2>je suis force jaune devant, marron derrière !</h2>
+    <br><img src="./exo.jpg" alt="exo">
+</body>
+<script>
+    var a;
+    function e1(){
+        var a=10;
+        var b=("boujour");
+        var c=true;
+        console.log(a,b,c)
+    }
+    function e2(){
+        var a=prompt("entier ?");
+        a=a%2;
+        alert(a);
+    }
+    function e3(){
+        var a =prompt("phrase ?");
+        var b =prompt("entier ?");
+        var c=a.substring(b);
+        alert (c);
+    }
+    function e4(a){
+        
+        a=prompt("entier ?")
+        if(a%2==0){
+            a=true;
+            console.log(a);
+            return a;
+        }else{
+            a=false;
+            console.log(a);
+            return a;
+        }
+    }
+    function e5(a){
+        
+        a=prompt("entier ?")
+        if(a%2==1){
+            a=true;
+            console.log(a);
+            return a;
+        }else{
+            a=false;
+            console.log(a);
+            return 5;
+        }
+    }
+    function e6(){
+        var a=prompt("nombre ?")
+        for (var i =2;i<a;i++){
+            if(a%i==0){
+                alert(i+" est un diviseur de "+a);
+                return false;
+            }
+        }
+        alert("il est premier");
+        return true;
+    }
+    function ea(nombre){
+			
+			for (var i = 2;i<nombre;i++){
+				if (nombre%i==0){
+					return false;
+				}
+			}
+			return true;
+		}
+		
+		function e7(nb){
+            if(!nb){nb=prompt("nb ?")}
+			var nombre = nb;
+			var compteur = 2;
+			while (nombre>0){
+			
+				if (ea(compteur)){
+					alert(compteur + " est premier");
+					nombre--;
+				}
+				compteur++;
+				
+			}
+		
+		}
+    function e8(){
+        function arrondir(nombre,virgule){
+			return Math.round(nombre*Math.pow(10,virgule))/Math.pow(10,virgule);
+			/*var puiss = Math.pow(10,virgule);
+			var nb = nombre * puiss;
+			var arr1 = Math.round(nb);
+			return arr1 / puiss;*/
+		}
+		
+		
+		var c = Math.round(5.6859);
+		var d = arrondir(5.6859,2);
+		alert(c);	
+		alert(d);	
+    }
+    function e9(){
+        a=prompt("entier ?")
+        if(a%4==0){
+            console.log(a+" est bissextile");
+        }else{
+            console.log(a+" n'est pas bissextile");
+        }
+    }
+    function e10(a){
+        if(!a){
+        var a=prompt("nombre ?");}
+        while(Math.round(a)!=a){
+            a=prompt("autre nombre ?")
+        }
+        alert("merci. maintenant je me sens entier .");
+        return a
+    }
+    function e11(){
+        var s=[]
+        while(e10()>0)
+        s.push(s);
+        console.log(s)
+        return s
+    }
+    function e12(){
+        var e=e11();
+        var z=eval(parseInt(e));
+        alert(e);
+    }
+    function e13(){
+        var e=e11();
+
+    }
+    function e14(){
+
+    }
+    function e15(){
+
+    }
+    function e16(){
+
+    }
+    function e17(){
+break
+    }
+    function e18(){
+
+    }
+    function e19(){
+
+    }
+    function e20(){
+
+    }
+</script>
+  </html>

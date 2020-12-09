@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr" class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+    #resultat{
+        border: 1px double black;
+        padding: 5px;
+        width: 300px;
+    }
+    body{
+        background-color: rgb(117, 188, 255);
+    }
+    #h{
+    position: absolute;
+    width : 8px;
+	height : 75px;
+	background-color: rgb(255, 37, 37);
+	transform:   rotate(0deg) ;
+	transform-origin: bottom;
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-top: 31px;
+}
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>w-s météooooo</title>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./Document_files/translateelement.css"></head>
+<body>
+    <form onsubmit="soumission(event)">
+        <label for="nom"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nom:</font></font></label>
+        <input id="nom" type="text" name="ville" placeholder="ville" value="lyon">
+        <input type="submit">
+    </form>
+    <div id="resultat">
+        <img id="img" src="" alt="">
+        
+    </div>
+    direction (a partir du nord)
+    <div id='h'>^</div>
+
+<script>
+    function soumission(event){
+        if(event)event.preventDefault();
+        nom = document.getElementById("nom").value;
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function(data) {
+            if (data.target.readyState==4 && data.target.status == 200) {
+                var code = JSON.parse(data.target.response);//kelvin - 273.15
+                console.log(code);
+                var doc=document.getElementById("resultat");
+                doc.innerHTML="<img id='img' src=''>"
+                insert("ville : "+code.name)
+                insert("pays : "+code.sys.country)
+                var icon = document.getElementById("img");
+                icon.setAttribute("src","http://openweathermap.org/img/wn/"+code.weather[0].icon+".png");
+                insert("température actuel : "+Math.round(code.main.temp-275.15)+" C°")
+                insert("temps : "+code.weather[0].main)
+                insert("vitesse des vents : "+code.wind.speed+"m/s / direction : "+code.wind.deg+"°N");
+                h.style.transform=' rotate('+code.wind.deg+'deg)';
+            }
+        };
+        xhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?q="+nom+"&APPID=826d43ce2e2753435e75a42a28fa2d79", true);
+        xhttp.send();
+    }
+    function insert(entré){
+        var meteo = document.createElement("P");
+            meteo.innerHTML = entré;
+            document.getElementById("resultat").appendChild(meteo);
+    }
+    soumission();
+</script>
+</body>
+</html>

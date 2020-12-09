@@ -1,0 +1,71 @@
+<!DOCTYPE xhtml>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 3px;
+        width: 32%;
+        border: 1px solid black;
+		background-color: white;
+    }
+    .selection {
+			transform: scale(1.1);
+			transition : 1s;
+	}
+    .nosel{
+        transform: scale(1.0);
+			transition : 0.5s;
+    }
+    body {
+			display : flex;
+			flex-wrap: wrap;
+			margin-top : 50px;
+		}
+        a{
+            position: absolute;
+            top: 30px;
+        }
+
+</style>
+<body>
+    <a href="./index.html">retour a l'index</a>
+    	<div class="nosel" onclick="bonjour();move(event.currentTarget)" onmouseout="out(event.target)">
+                <h2>Article 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure magni eum perspiciatis fuga, placeat ut nisi rerum? Voluptate porro iste laboriosam debitis rerum pariatur molestias eligendi soluta, labore perspiciatis tenetur?</p>
+            </div>
+            <div class="nosel" onclick="bonjour();move(event.currentTarget)" onmouseout="out(event.target)">
+                <h2>Article 2</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam quae enim molestias laborum est praesentium vero? Quia incidunt, magni est odit voluptatibus, velit repellendus magnam necessitatibus quaerat, ad harum error.</p>
+            </div>
+            <div class="nosel" onclick="bonjour();move(event.currentTarget)" onmouseout="out(event.target)">
+                <h2>Article 3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dolores officia eaque odio minus tempora nostrum odit enim, exercitationem ex quisquam unde sit et sequi ea expedita dolorum reprehenderit rerum?</p>
+            </div>
+            <div class="nosel" onclick="bonjour();move(event.currentTarget)" onmouseout="out(event.target)">
+                <h2>Article 4</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur magni veritatis totam, eveniet, ullam ea deleniti quo libero consectetur id architecto! Libero optio sunt id, commodi tempora consequuntur rem impedit.</p>
+            </div>
+            <div class="nosel" onclick="bonjour();move(event.currentTarget)" onmouseout="out(event.target)">
+                <h2>Article 5</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, asperiores amet. Et beatae, sit natus ducimus nesciunt aspernatur fuga repellendus esse necessitatibus quam consectetur neque, maxime dolorem, iure asperiores? Dolorem!</p>
+            </div>
+</body>
+<script>
+    function bonjour(){
+        console.log("salutation ma tres cher amérique !")
+    }
+    function move(a){
+        a.setAttribute("class","selection")
+    }
+    function out(r){
+        r.setAttribute("class","nosel")
+    }
+</script>
+</html>

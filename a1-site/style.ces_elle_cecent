@@ -1,0 +1,124 @@
+li {
+  color: crimson;
+  -webkit-transition: 1.0s;
+  transition: 1.0s;
+}
+
+button {
+  color: steelblue;
+  font-size: initial;
+  -webkit-transition: 1.0s;
+  transition: 1.0s;
+}
+
+input {
+  color: darkgreen;
+  -webkit-transition: 1.0s;
+  transition: 1.0s;
+}
+
+h2 {
+  color: deeppink;
+  font-size: large;
+  -webkit-transition: 1.0s;
+  transition: 1.0s;
+}
+
+p {
+  color: aliceblue;
+  -webkit-transition: 1.0s;
+  transition: 1.0s;
+}
+
+h1 {
+  color: aliceblue;
+  -webkit-transition: 1.0s;
+  transition: 1.0s;
+}
+
+i {
+  color: aliceblue;
+  -webkit-transition: 1.0s;
+  transition: 1.0s;
+}
+
+a {
+  color: #d058ff;
+  -webkit-transition: 1.0s;
+  transition: 1.0s;
+}
+
+h3 {
+  color: aliceblue;
+  -webkit-transition: 1.0s;
+  transition: 1.0s;
+}
+
+caption {
+  color: aqua;
+  -webkit-transition: 1.0s;
+  transition: 1.0s;
+}
+
+#div1 {
+  border: double #5858f8 7px;
+  width: 95%;
+  padding: 5px;
+  -webkit-transition: 1.0s;
+  transition: 1.0s;
+}
+
+#j {
+  left: 20px;
+  position: relative;
+  -webkit-transition: 1.0s;
+  transition: 1.0s;
+}
+
+#am {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+@media (max-width: 799px) {
+  body {
+    background-image: url(./geos.jpg);
+    background-size: cover;
+    -webkit-transition: 1.0s;
+    transition: 1.0s;
+  }
+  iframe {
+    opacity: 0.5;
+    -webkit-transition: 1.0s;
+    transition: 1.0s;
+  }
+  video {
+    opacity: 0.4;
+    -webkit-transition: 1.0s;
+    transition: 1.0s;
+  }
+}
+
+@media (min-width: 800px) {
+  body {
+    background-image: url(./proton.jpg);
+    -webkit-transition: 1.0s;
+    transition: 1.0s;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-image: url(./galaga.png);
+    -webkit-transition: 1.0s;
+    transition: 1.0s;
+    background-color: black;
+  }
+}
+
+legend {
+  color: bisque;
+  -webkit-transition: 1.0s;
+  transition: 1.0s;
+}
+/*# sourceMappingURL=style.css.map */

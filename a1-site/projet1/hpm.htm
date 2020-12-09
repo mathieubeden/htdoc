@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+	<script src="EdenRPG.js"></script>
+	
+</head>
+<style>
+	body {
+		margin : 0;
+		width : 100vw;
+		height : 100vh;
+		
+	}
+	
+	.hero {
+		width : 52px;
+		height : 72px;
+		background-image : url("./rpg/bryan.png");
+		background-position-x : 0px;
+		background-position-y : 0px;
+		position : absolute;
+		
+	
+	}
+	
+	.move-left{
+		background-position-y : -72px;
+		animation :  0.5s move infinite steps(3) alternate;
+	}
+	
+	.move-down{
+		background-position-y : 0px;
+		animation :  0.5s move infinite steps(3) alternate;
+	}
+	
+	.move-right{
+		background-position-y : -144px;
+		animation :  0.5s move infinite steps(3) alternate;
+	}
+	
+	.move-up{
+		background-position-y : -216px;
+		animation :  0.5s move infinite steps(3) alternate;
+	}
+	
+	@keyframes move{
+		0% {
+			background-position-x : 0px;
+		}
+		100% {
+			background-position-x : -156px;
+		}
+	
+	}
+	
+	.halo {
+		background-color : red;
+		opacity : 0.5;
+		position : absolute;
+	}
+</style>
+<body onkeydown="deplace(event)" onkeyup="repose(event)" onmousemove="dragMur(event)" onmousedown="debuterMur(event)" onmouseup="ajouterMur(event)" >
+
+</body>
+<script>
+	
+	var murs = [];
+	murs.push(new Mur(92,4,1450,56));
+	murs.push(new Mur(98,125,64,666));
+	murs.push(new Mur(104,731,1438,60));
+	murs.push(new Mur(1468,48,80,307));
+	murs.push(new Mur(1472,404,71,330));
+	murs.push(new Mur(748,117,76,556));
+	murs.push(new Mur(245,119,508,57));
+	murs.push(new Mur(814,121,585,57));
+	murs.push(new Mur(259,622,1139,56));
+	murs.push(new Mur(1334,353,63,207));
+	murs.push(new Mur(1362,404,150,63));
+	murs.push(new Mur(895,254,594,57));
+	murs.push(new Mur(897,307,90,313));
+	murs.push(new Mur(1047,488,321,60));
+	murs.push(new Mur(1047,309,86,133));
+	murs.push(new Mur(1212,309,63,136));
+	murs.push(new Mur(263,398,61,238));
+	murs.push(new Mur(308,409,373,62));
+	murs.push(new Mur(163,271,514,61));
+	murs.push(new Mur(392,468,85,102));
+	murs.push(new Mur(537,523,62,112));
+	murs.push(new Mur(677,529,72,101));
+		
+	
+
+	var map1 = new Map('grass',true, murs);
+	map1.charge();
+	var map = map1;
+	
+	/*setTimeout(function(){
+		map1.decharge();
+		var map2 = new Map('sand',true,[m3]);
+		map2.charge();
+		map = map2;
+	},3000
+	);*/
+	
+	
+	
+	var tab = [];
+	var type=["léo","antoine","loan","medhi","mathieu","alma","marie","luna","ines","audrey"];
+	for (var i = 0;i<10;i++){
+		tab.push(new Perso(type[i%6]));
+	}
+	var selected = tab[0];
+	var speed = 3;
+	
+    var xMur = undefined;
+	var yMur = undefined;
+	var halo = undefined;
+	
+	function debuterMur(event){
+			xMur = event.x;
+			yMur = event.y;
+	}
+	
+	function dragMur(event){
+		
+		if (xMur && yMur){
+			if (!halo){
+				halo = document.createElement("div");
+				halo.setAttribute("class","halo");		
+				document.body.appendChild(halo);
+			}
+			
+			if (event.x-xMur > 55 && event.y-yMur > 55){
+				halo.style.backgroundColor = "blue";
+			}else {
+				halo.style.backgroundColor = "red";
+			}
+			
+			halo.style.marginLeft = xMur+"px";
+			halo.style.marginTop = yMur+"px";
+			halo.style.width = event.x-xMur+"px";
+			halo.style.height = event.y-yMur+"px";
+			
+			
+			
+		}
+	}
+	
+	
+	function ajouterMur(event){
+		if (event.x-xMur > 55 && event.y-yMur > 55){
+			var m = new Mur(xMur,yMur,event.x-xMur,event.y-yMur);
+			map.ajouterObstacle(m);
+		}
+		
+		xMur = undefined;
+		yMur = undefined;
+		halo.remove();
+		halo = undefined;
+		
+	}
+	
+	function deplace(event){
+		if (event.keyCode>=96 && event.keyCode<=105){
+			selected = tab[event.key];
+		}
+		else if (event.keyCode==69){
+			
+			var obstacles = map.obstacles;
+			var code = "var murs = [];\n";
+			obstacles.forEach(function(o){
+				code += `murs.push(new Mur(${o.x},${o.y},${o.width},${o.height}));\n`;
+			});
+			console.log(code);
+			
+		}
+		else if (event.keyCode==37){
+			if (map.heroCanMoveLeft(selected))
+				selected.moveLeft();
+		}else if (event.keyCode==38) {
+			if (map.heroCanMoveUp(selected))
+				selected.moveUp();
+		}else if (event.keyCode==39) {
+			if (map.heroCanMoveRight(selected))
+				selected.moveRight();
+			
+		}else if (event.keyCode==40) {
+			if (map.heroCanMoveDown(selected))
+				selected.moveDown();
+		}
+	}
+	
+	function repose(event){
+		var perso = document.getElementById("toto");
+		
+		if (event.keyCode>=37 && event.keyCode<=40){
+			selected.stopMove();
+
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+</script>
+</html>

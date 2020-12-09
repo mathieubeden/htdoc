@@ -1,0 +1,38 @@
+{
+	"Decoration" : 
+	{
+		"Alpha" : 255,
+		"Blue" : 50,
+		"Green" : 100,
+		"Red" : 200
+	},
+	"Favorites" : null,
+	"Renderer" : 
+	{
+		"ColourMode" : 0,
+		"DebugMode" : false,
+		"Decorations" : true,
+		"DisplayModes" : 
+		[
+			2
+		],
+		"GravityField" : false,
+		"RenderModes" : 
+		[
+			4278252144,
+			67171201
+		]
+	},
+	"Scale" : 1,
+	"Simulation" : 
+	{
+		"AmbientHeat" : 0,
+		"EdgeMode" : 1,
+		"NewtonianGravity" : 0,
+		"PrettyPowder" : 0,
+		"UndoHistoryLimit" : 5
+	},
+	"User" : null,
+	"WindowX" : 482,
+	"WindowY" : 212
+}

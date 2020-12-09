@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="./js.html">reload</a>
+    <h1>seul avec mon java, je n'ai plus rien a fair là...</h1>
+</body>
+<script>{
+    alert("je vais demander l'age des deux personnes et determiner qui est le ou la plus jeune");
+    var nom=prompt("le nom de la premiere personne");
+    var pre=prompt("le prénom de la premiere personne");
+    var age=prompt("l'age de la premiere personne");
+    var nom1=prompt("le nom de la deuxieme personne");
+    var pre1=prompt("le prénom de la deuxieme personne");
+    var age1=prompt("l'age de la deuxieme personne");
+    if(age1<age){
+        alert(pre+" "+nom+" est le ou la plus jeune  !")
+    }else if(age<age1){
+        alert(pre1+" "+nom1+" est le ou la plus jeune !")
+    }else if(age==age1){
+        alert("vous avez le meme age, "+age+" ans !")
+    }
+}
+</script>
+</html>

@@ -1,0 +1,31 @@
+$color1:red;
+$col2:white;
+$f1:15px;
+body{
+    animation: dia 1000s ease-in-out infinite both;
+    background-size: auto;
+    transition: 5s;
+}
+h1{
+    color: $color1;
+}
+h2{
+    color: $color1;
+}
+.element{display: inline;}
+a{
+    color: $col2;
+    font-size: $f1*2.5;
+}
+@keyframes dia{
+      0%{background-image: url(./proton.jpg);};
+    20%{background-image: url(./mu.jpg);};
+    40%{background-image: url(./mig.jpg);};
+    60%{background-image: url(./proton.jpg)};
+    80%{background-image: url(./mu.jpg);};
+    100%{background-image: url(./mig.jpg);};
+}
+p{
+    color: $col2;
+}
+div{color:$col2}

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calculette</title>
+</head>
+<style>
+    #calc{
+        border: 1px double blue;
+        width: 200px;
+        height: 295px;
+        background-color: aqua;
+        display: inline-block;}
+    #title{
+        margin: 5px;
+        padding: 10px;
+        overflow: auto;
+        border: 1px solid black;
+        background-color: darkcyan}
+    button{
+        margin: 5px 5px 5px 10px;
+        padding: 10px;
+        background-color: chartreuse;}
+.croix{
+    background-image: url(./img/carré.png);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border: 1px solid black;
+}
+.rond{
+    background-image: url(./img/rond.png);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border: 1px solid black;
+}
+.blanc{
+    background-color: gray;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border: 1px solid black;
+}
+#mort{display: inline-block;
+    height: 640px;
+    width: 850px;
+    padding: 20px;
+    border: 1px solid black;}
+</style>
+<body>
+    <div id="calc">
+        <h5 id="title">0+</h5>
+        <button id="i1" onclick="in1()">7</button>
+        <button id="i2" onclick="in2()">8</button>
+        <button id="i3" onclick="in3()">9</button>
+        <button id="i4" onclick="in4()">X</button>
+        <button id="i5" onclick="in5()">4</button>
+        <button id="i6" onclick="in6()">5</button>
+        <button id="i7" onclick="in7()">6</button>
+        <button id="i8" onclick="in8()">-</button>
+        <button id="i9" onclick="in9()">1</button>
+        <button id="i10" onclick="in10()">2</button>
+        <button id="i11" onclick="in11()">3</button>
+        <button id="i12" onclick="in12()">+</button>
+        <button id="i13" onclick="in13()">.</button>
+        <button id="i14" onclick="in14()">0</button>
+        <button id="i15" onclick="in15()">c</button>
+        <button id="i16" onclick="in16()">=</button>
+        <button id="i13" onclick="in17()">(</button>
+        <button id="i14" onclick="in18()">/</button>
+        <button id="i15" onclick="in19()">)</button>
+        <button id="i16" onclick="in20()">%</button>
+        </div>
+        <div id="mort">
+            <div onclick="mor(event)" id="car0" class="blanc"></div>
+            <div onclick="mor(event)" id="car1" class="blanc"></div>
+            <div onclick="mor(event)" id="car2" class="blanc"></div>
+            <div onclick="mor(event)" id="car3" class="blanc"></div>
+            <div onclick="mor(event)" id="car4" class="blanc"></div>
+            <div onclick="mor(event)" id="car5" class="blanc"></div>
+            <div onclick="mor(event)" id="car6" class="blanc"></div>
+            <div onclick="mor(event)" id="car7" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+            <div onclick="mor(event)" id="car8" class="blanc"></div>
+        </div><button onclick="reset()">rst</button>
+        <br>
+        <a href="./index.html">retour a l'index</a>
+</body>
+<script>
+    function in1(){
+        var e=document.getElementById("title");
+        e.innerHTML=(e.innerHTML+'7')
+    }
+    function in2(){
+        var e=document.getElementById("title");
+        e.innerHTML=(e.innerHTML+'8')
+    }
+    function in3(){
+        var e=document.getElementById("title");
+        e.innerHTML=(e.innerHTML+'9')
+    }
+    function in4(){
+        var e=document.getElementById("title");
+        e.innerHTML=(e.innerHTML+'*')
+    }
+    function in5(){
+        var e=document.getElementById("title");
+        e.innerHTML=(e.innerHTML+'4')
+    }
+    function in6(){
+        var e=document.getElementById("title");
+        e.innerHTML=(e.innerHTML+'5')
+    }
+    function in7(){
+        var e=document.getElementById("title");
+        e.innerHTML=(e.innerHTML+'6')
+    }
+    function in8(){
+        var e=document.getElementById("title");
+        e.innerHTML=(e.innerHTML+'-')
+    }
+    function in9(){
+        var e=document.getElementById("title");
+        e.innerHTML=(e.innerHTML+'1')
+    }
+    function in10(){
+        var e=document.getElementById("title");
+        e.innerHTML=(e.innerHTML+'2')
+    }
+    function in11(){
+        var e=document.getElementById("title");
+        e.innerHTML=(e.innerHTML+'3')
+    }
+    function in12(){
+        var e=document.getElementById("title");
+        e.innerHTML=(e.innerHTML+'+')
+    }
+    function in13(){
+        var e=document.getElementById("title");
+        e.innerHTML=(e.innerHTML+'.')
+    }
+    function in14(){
+        var e=document.getElementById("title");
+        e.innerHTML=(e.innerHTML+'0')
+    }
+    function in15(){
+        var e=document.getElementById("title");
+        e.innerHTML=('0+')
+    }
+    function in16(){       // afficher le resultat 
+        var e=document.getElementById("title");
+        var egal = eval(e.innerHTML);
+        e.innerHTML=egal;
+    }
+    function in17(){
+        var e=document.getElementById("title");
+        e.innerHTML=(e.innerHTML+'(')
+    }
+    function in18(){
+        var e=document.getElementById("title");
+        e.innerHTML=(e.innerHTML+'/')
+    }
+    function in19(){
+        var e=document.getElementById("title");
+        e.innerHTML=(e.innerHTML+')')
+    }
+    function in20(){
+        var e=document.getElementById("title");
+        e.innerHTML=(e.innerHTML+'%')
+    }
+    
+    var a=false;
+    function reset(){
+        window.location.href="./calc.html"
+    }
+    function mor(e){
+        
+        var div=e.target;
+        var classe=div.getAttribute("class");
+        if (classe=="blanc"){
+            if (a==0){
+                div.setAttribute("class","rond");
+                a=true;
+            }else{
+                div.setAttribute("class","croix");
+                a=false;
+            }
+        }
+        console.log(a)
+    }
+
+</script>
+</html>

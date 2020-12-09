@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'brandon';
+    src:url(./brandon-grotesque-light-58a8a4b38001d.otf)
+}
+*{
+    font-family: 'brandon';
+}
+body {
+    margin : 0px;
+    padding : 0px;
+}
+#banniere {
+    background: url("./image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+    color : white;
+    font-size : 18px;
+    padding : 0px;
+    font-weight: bold;
+    padding-bottom : 150px;
+}
+
+#menu {
+    padding-top : 50px;
+}
+
+#menu ul {
+    list-style-type: none;
+    display : flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#surtitre{
+    text-align: center;
+    margin-top : 80px;
+    font-size: 32px;
+}
+
+#titre{
+    text-align: center;
+    margin-top : 50px;
+    font-size : 66px;
+}
+
+#bouton{
+    text-align: center;
+    margin-top : 50px;
+    
+}
+
+#bouton > .col > div {
+    padding : 15px 50px 15px 50px;
+    font-size: 23px;
+    font-weight: bold;
+    border-width: 3px;
+}
+
+#logo {
+    display : flex;
+    justify-content: center;
+}
+#tree{
+    height: 270px;
+}
+#treep{
+    height: 270px;
+    margin-bottom: 50px;
+}
+.container-active{
+    background-color: #fafafa;
+}
+
+.bandeau{
+    padding-top : 100px;
+    padding-bottom : 90px;
+}

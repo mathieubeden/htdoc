@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="shortcut icon" href="./téléchargement (1).jpg" type="image/x-icon">
+    <title>counter</title>
+    <style>
+    #p{
+        border: 1px solid black;
+        width: 300px;
+        height: 150px;
+        margin: 10px;
+    }
+    div{
+        display: inline;
+        padding: 10px;
+    }
+    #p{
+        top: 50px;
+    }
+    </style>
+</head>
+<body>
+    <a href="./index.html">retour a l'index</a>
+		<div id="p">
+             <button onclick="clic()">
+            cilck</button>
+            <div id="counter">
+
+            </div>
+            <div id="viti"></div>
+            <div id="tem"></div>
+        </div>
+</body>
+<script>
+        var n = 0;
+        var tdep;
+        function clic(){
+
+            if (!tdep){
+                var d =new Date()
+                tdep= d.getTime();
+                
+            }
+            var dd = new Date();
+            var tclick= dd.getTime()+1;
+
+            n++;
+            var div=document.getElementById("counter").innerHTML = n;
+            
+        }
+    </script>
+</html>

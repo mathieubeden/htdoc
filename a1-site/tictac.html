@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tic tac...</title>
+</head>
+<body>
+    <div id="heure" class="element"></div>
+    <div class="element">:</div>
+    <div id="min" class="element"></div>
+    <div class="element">:</div>
+    <div id="sec" class="element"></div>
+    <div class="element">:</div>
+    <div id="mil" class="element last"></div>
+    <div class="element"></div>
+    <br>
+    <div id="ff" class="element"></div>
+</body>
+<script>
+    function maj(){
+        var d = new Date();
+        var h = d.getHours();
+        var m = d.getMinutes();
+        var s = d.getSeconds();
+        var ms = d.getMilliseconds();
+        ms=Math.round(ms/100);
+            if(s<10){s="0"+s}
+            if(m<10){m="0"+m}
+            if(h<10){h="0"+h}
+            if(ms<100){ms="0"+ms;
+            if(ms<10){ms="0"+ms}}
+            if(h>16&&m>29){
+            var element=document.getElementById("ff");
+            element.innerHTML="<p>c'est l'heure !!!!!!!</p>"}
+            document.getElementById("heure").innerHTML = h;
+            document.getElementById("min").innerHTML = m;
+            document.getElementById("sec").innerHTML = s;
+            document.getElementById("mil").innerHTML = Math.round(ms);}
+setInterval(maj,11);
+</script>
+<style>
+body{
+    display: flex;
+    justify-content: center;
+    background-image: url(./matrix.gif);
+    text-align: center;
+    font-family: codl;
+    color: rgb(223, 252, 157);
+    font-size: 300%;
+}
+.element{
+    padding: 5px;
+}
+@font-face {
+  font-family: 'codl';
+  src: url(./gun4f.ttf);
+}
+</style>
+</html>

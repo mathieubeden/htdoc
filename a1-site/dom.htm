@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="dom">
+</head>
+<style>
+#par{
+    width:90%;
+    display: inline-block;
+    padding: 0px;
+}
+</style>
+<body>
+    <div id="par" onclick="gg()">
+        <h1>banana</h1>
+        <h3>splite</h3>
+        <img id="replace" src="./200px-Newtons_cradle_animation_book_2.gif" alt="hj">
+    </div>
+</body>
+<script>
+    function gg(){
+        var div=document.createElement('div');
+        div.setAttribute('style','display:inline;')
+        div.innerHTML="<img src='./200px-Rotating_earth_(large).gif'>"
+        document.getElementById('replace').replaceWith(div)
+    }
+</script>
+</html>

@@ -7,9 +7,8 @@ class auth{
         $this->user=$user;
         $this->pass=$pass; 
     }
-    public function verification_user(){
-        //verification du user et du pass
-     $pass=hash('ripemd160', $this->pass);
+    public function verification_user(){//verifi si c'est le bon login et le bon mdp
+        $pass=hash('ripemd160', $this->pass);//hash le mot de passe pour le comparer avec le hash de la bdd
         try{
             $base = new PDO('mysql:host=127.0.0.1;dbname=blogoo', 'root', '');
             $base->exec('SET NAMES utf8');
