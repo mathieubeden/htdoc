@@ -20,9 +20,10 @@
     
     </style>
 <body>
-    <h1>inscription</h1>
+    <h2>inscription</h2>
     <?php
         include('./auth.php');
+        include('./signer.php');
         //echo hash('ripemd160', 'root');
         if(isset($_POST['user'])){
             //recuperation de tout ce qui vien du poste
@@ -44,6 +45,7 @@
 
     ?><br>
     <br><button onclick="window.location.href='./blogoo.php'">aller au blog</button><br>
+    <br><button onclick="window.location.href='./connect.php'">se connecter</button><br>
     <form action="./signin.php" method="post">
     user : <input type="text" name='user'/><br><br>
     password : <input type="password" name="pass" id="pass"><br><br>

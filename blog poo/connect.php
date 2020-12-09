@@ -6,7 +6,7 @@ include('./auth.php');
         $verific=new auth($_POST['user'],$_POST['pass']);
 
         if($verific->verification_user()){//verification de l'existance et de la validité de l'user
-            setcookie('user', $_POST['user'], time()+3600);
+            setcookie('user', $_POST['user'], time()+900);
             header('location:blogoo.php');
         }else{
             echo "nom d'utilisateur ou mot de passe incorrect";
@@ -29,7 +29,7 @@ include('./auth.php');
         
     }
     form{
-        margin-top:10%;
+        margin-top:3%;
     }
     input{
         border-radius:5px;
@@ -38,10 +38,14 @@ include('./auth.php');
     </style>
     <body>
     <h1>connection</h1>
+    <h2><?php if(isset($_COOKIE['user'])){echo 'your current user is : '.$_COOKIE['user'];}?></h2>
+    
+    <br><button onclick="window.location.href='./signin.php'">s'inscrire</button><br>
         <form action="./connect.php" method="post">
         user : <input type="text" name='user'/><br><br>
         password : <input type="password" name="pass" id="pass"><br><br>
         <input type="submit" value="connection">
         </form>
+        <br><br><button onclick="window.location.href='./blogoo.php'">go back</button><br>
     </body>
     </html>

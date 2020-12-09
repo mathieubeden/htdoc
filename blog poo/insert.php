@@ -67,7 +67,7 @@ if(isset($_POST)){//inser l'article dans la base de donnée
                 $_FILES['photo']['name']=$id.'.jpg';// renomage de la photo par l'id de l'article
                 move_uploaded_file($_FILES['photo']['tmp_name'],
                 $chemin_destination.$_FILES['photo']['name']);
-                header('location:insertion.php'); 
+                header('location:insertion.php?ok=ok'); 
             }
             else {//si sa merde
                 echo "Le fichier n'a pas pu être copié dans le répertoire fichiers.<br>";

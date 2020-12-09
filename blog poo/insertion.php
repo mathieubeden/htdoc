@@ -13,13 +13,14 @@
         <br>
         titre : <input required type="text" name="titre" id="title">
         <br>
-        commentaire : <textarea style='width:20%;height:20%;' required id="commentary" name="comm"></textarea>
+        commentaire : <textarea style='width:20%;height:20%;' id="commentary" name="comm"></textarea>
         <br>
         photo : <input type="file" name="photo" id="photo" accept="image/x-png,image/gif,image/jpeg">
         <br>
-        <input type="submit" value="envoyer">
+        <input type="submit" value="envoyer"><br>
+        <br><?php if(isset($_GET['ok'])){echo 'votre article a été ajouté';}?>
     </form>
-    <br><br>
+    <br>
     <button onclick="window.location.href='./blogoo.php'">aller au blog</button>
 
 
