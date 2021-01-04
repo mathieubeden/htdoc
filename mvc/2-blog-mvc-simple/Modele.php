@@ -21,7 +21,7 @@ function getBillet($idBillet) {
     else
         throw new Exception("Aucun billet ne correspond à l'identifiant '$idBillet'");
 }
-
+//delete les coms et le billet
 function delBillet($idBillet) {
     $bdd = getBdd();
     $billet = $bdd->prepare('delete from t_commentaire where BIL_ID=?');
@@ -30,7 +30,7 @@ function delBillet($idBillet) {
     $billet->execute(array((int)$idBillet));
     header('location:index.php');
 }
-
+//delete juste un com
 function delcom($idCom) {
     $bdd = getBdd();
     $billet = $bdd->prepare('delete from t_commentaire where COM_ID=?');
