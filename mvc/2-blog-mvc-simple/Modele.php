@@ -31,6 +31,13 @@ function delBillet($idBillet) {
     header('location:index.php');
 }
 
+function delcom($idCom) {
+    $bdd = getBdd();
+    $billet = $bdd->prepare('delete from t_commentaire where COM_ID=?');
+    $billet->execute(array((int)$idCom));
+    header('location:index.php');
+}
+
 // Renvoie la liste des commentaires associés à un billet
 function getCommentaires($idBillet) {
     $bdd = getBdd();

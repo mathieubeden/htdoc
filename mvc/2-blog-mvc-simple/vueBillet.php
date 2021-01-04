@@ -14,7 +14,7 @@
 </header>
 <?php foreach ($commentaires as $commentaire): ?>
     <p><?= $commentaire['auteur'] ?> dit :</p>
-    <p><?= $commentaire['contenu'] ?></p>
+    <p><?= $commentaire['contenu'] ?> <button onclick="window.location.href='comdel.php?id=<?= $commentaire['id'] ?>&id2=<?= $_GET['id'] ?>'">delete</button></p>
 <?php endforeach; ?>
 <?php $contenu = ob_get_clean(); ?>
 
