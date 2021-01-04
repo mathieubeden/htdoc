@@ -8,11 +8,11 @@
 </head>
 
 <body>
-
+<h1 id="res"></h1>
 </body>
 <script>
     var ent = parseInt(prompt("nomb"));
-    var tab = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+    var tab = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
     function dicko(ent, tab) {
         var a=-1;
@@ -36,7 +36,7 @@
         if(tab[a]==nb){return true;}
         else{return false}
     }
-    console.log(dicko(ent,tab));
+    document.getElementById("res").innerHTML=dicko(ent,tab)
 </script>
 
 </html>
