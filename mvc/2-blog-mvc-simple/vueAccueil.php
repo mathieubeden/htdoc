@@ -6,7 +6,7 @@
         <header>
             <a href="<?= "billet.php?id=" . $billet['id'] ?>">
                 <h1 class="titreBillet"><?= $billet['titre'] ?></h1>
-            </a>
+            </a><button onclick="window.location.href='./deldel.php?id=<?= $billet['id'] ?>'">delet</button><br>
             <time><?= $billet['date'] ?></time>
         </header>
         <p><?= $billet['contenu'] ?></p>

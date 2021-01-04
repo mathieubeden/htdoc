@@ -22,6 +22,15 @@ function getBillet($idBillet) {
         throw new Exception("Aucun billet ne correspond à l'identifiant '$idBillet'");
 }
 
+function delBillet($idBillet) {
+    $bdd = getBdd();
+    $billet = $bdd->prepare('delete from t_commentaire where BIL_ID=?');
+    $billet->execute(array((int)$idBillet));
+    $billet = $bdd->prepare('delete from t_billet where BIL_ID=?');
+    $billet->execute(array((int)$idBillet));
+    header('location:index.php');
+}
+
 // Renvoie la liste des commentaires associés à un billet
 function getCommentaires($idBillet) {
     $bdd = getBdd();

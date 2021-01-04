@@ -13,12 +13,12 @@ html, body {
 
 body {
     color: #bfbfbf;
-    background: black;
+    background: rgb(50, 0, 0);
     font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;
 }
 
 h1 {
-    color: white;
+    color: rgb(57, 60, 255);
 }
 
 .titreBillet {
@@ -27,7 +27,7 @@ h1 {
 
 #global {
     min-height: 100%;  /* Voir commentaire sur html et body plus haut */
-    background: #333534;
+    background: #00773c;
     width: 70%;
     margin: auto;	/* Permet de centrer la div */
     text-align: justify;
