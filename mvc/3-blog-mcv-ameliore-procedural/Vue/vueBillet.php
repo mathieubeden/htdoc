@@ -14,9 +14,9 @@
 </header>
 <?php foreach ($commentaires as $commentaire): ?>
     <p><?= $commentaire['auteur'] ?> dit :</p>
-    <p><?= $commentaire['contenu'] ?></p> <button onclick="window.location.href='comdel.php?id=<?= $commentaire['id'] ?>&id2=<?= $_GET['id'] ?>'">delete</button><br>
+    <p><?= $commentaire['contenu'] ?></p> <button onclick="window.location.href='index.php?id=<?= $commentaire['id'] ?>&id2=<?= $billet['id'] ?>&action=comdel'">delete</button><br>
 <?php endforeach; ?>
-<form action="complus.php?id=<?= (int)$_GET['id'] ?>" method="post">
+<form action="index.php?id=<?= (int)$_GET['id'] ?>&action=complus&id2=<?= $billet['id']?>" method="post">
     auteur : <input type="text" require name="auteur" id="auth"><br>
     comment : <textarea require cols="80" rows="5" id="commentary" name="contenu"></textarea><br>
     <input type="submit" value="soumission">

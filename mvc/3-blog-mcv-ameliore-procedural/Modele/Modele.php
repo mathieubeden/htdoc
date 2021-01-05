@@ -36,13 +36,13 @@ function delcom($idCom) {
     $billet = $bdd->prepare('delete from t_commentaire where COM_ID=?');
     $billet->execute(array((int)$idCom));
 }
-
+//ajt un com
 function complus($id,$auth,$cont) {
     $bdd = getBdd();
     $billet = $bdd->prepare('INSERT INTO t_commentaire(COM_DATE, COM_AUTEUR, COM_CONTENU, BIL_ID) VALUES (?,?,?,?)');
-    $billet->execute(array(date(),$auth,$cont,$id));
+    $billet->execute(array(time(),$auth,$cont,$id));
 }
-
+//ajt un bill
 function billplus($titr,$cont) {
     $bdd = getBdd();
     $billet = $bdd->prepare('INSERT INTO t_billet(BIL_TITRE, BIL_CONTENU) VALUES (?,?)');
@@ -60,6 +60,7 @@ function getCommentaires($idBillet) {
 }
 
 // Effectue la connexion à la BDD
+
 // Instancie et renvoie l'objet PDO associé
 function getBdd() {
     $bdd = new PDO('mysql:host=localhost;dbname=mda;charset=utf8', 'root',
