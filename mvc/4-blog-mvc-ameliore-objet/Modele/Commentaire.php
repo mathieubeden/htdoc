@@ -20,4 +20,9 @@ class Commentaire extends Modele {
         $date = date(DATE_W3C);  // Récupère la date courante
         $this->executerRequete($sql, array($date, $auteur, $contenu, $idBillet));
     }
+    
+    public function suprimercomm($id) {
+        $sql = 'delete from T_commentaire where COM_ID=?'; // delet le con
+        $this->executerRequete($sql, array($id));
+    }
 }

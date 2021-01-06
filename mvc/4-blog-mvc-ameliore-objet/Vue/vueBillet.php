@@ -14,6 +14,7 @@
 <?php foreach ($commentaires as $commentaire): ?>
     <p><?php echo $commentaire['auteur'] ?> dit :</p>
     <p><?php echo $commentaire['contenu'] ?></p>
+     <button onclick="window.location.href='index.php?action=decomm&id=<?= $commentaire['id'] ?>&id2=<?= $billet['id'] ?>'">suprimer</button>
 <?php endforeach; ?>
 <hr />
 <form method="post" action="index.php?action=commenter">

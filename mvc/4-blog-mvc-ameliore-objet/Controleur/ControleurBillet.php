@@ -40,5 +40,10 @@ class ControleurBillet {
         $this->billet->suprimerBillet($id);
     }
 
+    public function decommenter($id) {
+        // Sauvegarde du commentaire
+        $this->commentaire->suprimercomm($id);
+    }
+
 }
 

@@ -42,6 +42,12 @@ class Routeur {
                     $this->ctrlBillet->debilleter($id);
                     $this->ctrlAccueil->accueil();
                 }
+                else if ($_GET['action'] == 'decomm') {
+                    $id = $this->getParametre($_GET, 'id');
+                    $id2 = $this->getParametre($_GET, 'id2');
+                    $this->ctrlBillet->decommenter($id);
+                    $this->ctrlBillet->billet($id2);
+                }
                 else
                     throw new Exception("Action non valide");
             }
