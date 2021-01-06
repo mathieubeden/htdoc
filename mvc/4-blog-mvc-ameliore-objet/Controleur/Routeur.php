@@ -54,7 +54,7 @@ class Routeur {
             else {  // aucune action définie : affichage de l'accueil
                 $this->ctrlAccueil->accueil();
             }
-        }
+        }//erreur d'affichage
         catch (Exception $e) {
             $this->erreur($e->getMessage());
         }
