@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var vaiss1=1;
+        var vaiss2=1;
+        var v1temp=1;
+        var v2temp=1;
+        var dist=380000;//225000000
+        var minuterie=1;
+        while(vaiss1<(dist-vaiss2)){ 
+            minuterie+=1;
+            v1temp=vaiss1;
+            vaiss1=v1temp+v2temp;
+            v2temp=v1temp;
+            vaiss2*=1.6;
+            console.log("1-"+vaiss1);
+            console.log("2-"+vaiss2); 
+        }
+        console.log("t+"+minuterie+" minutes");
+
+    </script>
+</body>
+</html>
