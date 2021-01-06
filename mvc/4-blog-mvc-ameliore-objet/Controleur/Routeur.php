@@ -31,6 +31,17 @@ class Routeur {
                     $idBillet = $this->getParametre($_POST, 'id');
                     $this->ctrlBillet->commenter($auteur, $contenu, $idBillet);
                 }
+                else if ($_GET['action'] == 'billeter') {
+                    $auteur = $this->getParametre($_POST, 'titre');
+                    $contenu = $this->getParametre($_POST, 'contenu');
+                    $this->ctrlBillet->billeter($auteur, $contenu);
+                    $this->ctrlAccueil->accueil();
+                }
+                else if ($_GET['action'] == 'debilleter') {
+                    $id = $this->getParametre($_GET, 'id');
+                    $this->ctrlBillet->debilleter($id);
+                    $this->ctrlAccueil->accueil();
+                }
                 else
                     throw new Exception("Action non valide");
             }

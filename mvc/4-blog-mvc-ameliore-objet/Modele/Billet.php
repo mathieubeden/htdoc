@@ -34,4 +34,18 @@ class Billet extends Modele {
             throw new Exception("Aucun billet ne correspond à l'identifiant '$idBillet'");
     }
 
+    public function ajouterbillet($auteur, $contenu) {
+        $sql = 'insert into T_billet(BIL_DATE, BIL_TITRE, BIL_CONTENU)'
+            . ' values(?, ?, ?)';
+        $date = date(DATE_W3C);  // Récupère la date courante
+        $this->executerRequete($sql, array($date, $auteur, $contenu));
+    }
+
+    public function suprimerbillet($id) {
+        $sql = 'delete from T_commentaire where BIL_ID=?'; // delet les coms
+        $this->executerRequete($sql, array($id));
+        $sql = 'delete from T_billet where BIL_ID=?'; // delet le billet
+        $this->executerRequete($sql, array($id));
+    }
+
 }

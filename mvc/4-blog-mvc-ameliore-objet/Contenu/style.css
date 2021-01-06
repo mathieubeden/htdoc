@@ -12,8 +12,8 @@ html, body {
 }
 
 body {
-    color: #1eff00;
-    background: rgb(255, 0, 0);
+    color: #59ff59;
+    background: rgb(214, 0, 64);
     font-family:'Comic Sans MS' ;
 }
 
@@ -27,7 +27,7 @@ h1 {
 
 #global {
     min-height: 100%;  /* Voir commentaire sur html et body plus haut */
-    background: #001000;
+    background: #1d1027;
     width: 80%;
     margin: auto;	/* Permet de centrer la div */
     text-align: justify;

@@ -30,5 +30,15 @@ class ControleurBillet {
         $this->billet($idBillet);
     }
 
+    public function billeter($auteur, $contenu) {
+        // Sauvegarde du commentaire
+        $this->billet->ajouterBillet($auteur, $contenu);
+    }
+
+    public function debilleter($id) {
+        // Sauvegarde du commentaire
+        $this->billet->suprimerBillet($id);
+    }
+
 }
 
