@@ -13,6 +13,6 @@
         <br>
         <input type="submit" value="login">
     </form>
-    <h3><?php if(isset($_GET['miss'])){echo "fails : ".$_GET['miss']."<br>";}; ?></h3>
+    <h3><?php if(isset($_GET['miss'])){echo "fails : ".$_GET['miss']."<br>";} ?></h3>
 </body>
 </html>

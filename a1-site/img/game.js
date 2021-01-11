@@ -670,7 +670,7 @@ function checkCollisions() {
 		}
 	}	
 	
-};
+}
 
 
 function pointIsLessThanLine(point, linepoint1, linepoint2) {

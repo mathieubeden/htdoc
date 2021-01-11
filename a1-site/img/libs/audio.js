@@ -86,7 +86,7 @@ var audio = {};
             a = a < -32768 ? -32768 : 32767 < a ? 32767 : a; // clamp
             a += a < 0 ? 65536 : 0;                       // 2-s complement
             out += String.fromCharCode(a & 255, a >> 8);
-        };
+        }
         return out;
     }
     
@@ -97,7 +97,7 @@ var audio = {};
             var a = (arr[i] * 127 + 128) | 0;
             a = a < 0 ? 0 : 255 < a ? 255 : a;
             out += String.fromCharCode(a);
-        };
+        }
         return out;
     }
     

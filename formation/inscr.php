@@ -24,7 +24,7 @@ intitulé de formtion : <input required type="text" name="intit" id="intit"><br>
         }
         
         else{echo "des champs sont invalide ou manquant";}
-        }; ?></h3>
+        } ?></h3>
 <?php
         try
 {

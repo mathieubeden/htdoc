@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3aaa1ac1-2a6f-41cc-9e7b-9c2f3bcc8f4b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/archive/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/archive/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img.txt" beforeDir="false" afterPath="$PROJECT_DIR$/img.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reda.txt" beforeDir="false" afterPath="$PROJECT_DIR$/reda.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvc/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1-site/alea alpha.js" beforeDir="false" afterPath="$PROJECT_DIR$/a1-site/alea alpha.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1-site/assets/js/css-browser-selector.js" beforeDir="false" afterPath="$PROJECT_DIR$/a1-site/assets/js/css-browser-selector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1-site/assets/js/game-of-life-v3.1.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/a1-site/assets/js/game-of-life-v3.1.1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1-site/img/LandscapeData.js" beforeDir="false" afterPath="$PROJECT_DIR$/a1-site/img/LandscapeData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1-site/img/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/a1-site/img/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1-site/img/libs/audio.js" beforeDir="false" afterPath="$PROJECT_DIR$/a1-site/img/libs/audio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/ajblog.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/ajblog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/delet.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/delet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/modif.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/modif.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/formation/inscr.php" beforeDir="false" afterPath="$PROJECT_DIR$/formation/inscr.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/4-blog-mvc-ameliore-objet/Vue/vueAccueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/4-blog-mvc-ameliore-objet/Vue/vueAccueil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/4-blog-mvc-ameliore-objet/Vue/vueBillet.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/4-blog-mvc-ameliore-objet/Vue/vueBillet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objet/cour2/spaceuse.php" beforeDir="false" afterPath="$PROJECT_DIR$/objet/cour2/spaceuse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/sql/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,14 +30,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpDebugGeneral" listening_started="true" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false" />
+  <component name="PhpWebServerValidation" path_to_validation_script="C:\xampp\htdocs" selected_validation_type="LOCAL" web_path_to_validation_script="http://127.0.0.1/" />
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
     <include_path>
       <path value="$PROJECT_DIR$/../php" />
     </include_path>
   </component>
   <component name="ProjectId" id="1lTIPUpFXnF7hXwIokAxqjAC6NV" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,7 +51,28 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../php/php.exe" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="PHP Script.index.php">
+    <configuration name="js2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/htdocs/js2.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/mvc/4-blog-mvc-ameliore-objet/index.php">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.index.php" />
+        <item itemvalue="JavaScript Debug.js2.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -47,10 +84,52 @@
       <updated>1607614632557</updated>
       <workItem from="1607614635600" duration="112000" />
       <workItem from="1607700046834" duration="168000" />
+      <workItem from="1610110572197" duration="3519000" />
+      <workItem from="1610115065148" duration="1421000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/mvc/test.php</url>
+          <line>3</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/mvc/test.php</url>
+          <line>1</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/mvc/test.php</url>
+          <line>5</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="javascript-exception" />
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

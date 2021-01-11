@@ -5,7 +5,7 @@
      titre : <input required type="text" name="title" id="title"><br>
              <input type="submit" value="envoyer">
 </form>
-<h3><?php if(isset($_GET['miss'])&&$_GET['miss']>=1){echo "fails  ".($_GET['miss'])."<br>";}; ?></h3>
+<h3><?php if(isset($_GET['miss'])&&$_GET['miss']>=1){echo "fails  ".($_GET['miss'])."<br>";} ?></h3>
 <a href="blog.php">aller au blog</a>
 <?php
     //hash('ripemd160', 'root');

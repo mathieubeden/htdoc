@@ -1014,11 +1014,11 @@
             state[k] = newState[k];
           }
 
-          return;
+
 
         } else if (y > state[state.length - 1][0]) { // Add to Tail
           state[state.length] = [y, x];
-          return;
+
 
         } else { // Add to Middle
 

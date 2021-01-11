@@ -427,7 +427,7 @@ function Landscape(){
 	}
 
 	
-}; 
+}
 
 function LandscapeLine(p1, p2) { 
 	this.p1 = p1; 
