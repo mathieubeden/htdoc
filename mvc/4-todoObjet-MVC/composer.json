@@ -1,0 +1,11 @@
+{
+    "name": "mbreymand/4-todo-objet-mvc",
+    "description": "test",
+    "require": {},
+    "autoload": {
+    "psr-4": {
+        "Todo\\": "src/"
+    }
+}
+}
+

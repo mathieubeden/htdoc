@@ -10,9 +10,11 @@ class connect extends modele{
     }
 
     public function verific($user,$pass){
-        $sql="select id from user where username=? and password=?";
+        $sql="select id,username from user where username=? and password=?";
         $arr=array("username"=>$user,"password"=>$pass);
-        $this=>executerRequete($sql, $arr)
+        $this=>executerRequete($sql, $arr);
+        if ($billet->rowCount() > 0)
+            return true;
     }
 
 
