@@ -2,6 +2,7 @@
 
 namespace Todo\Models;
 
+use Todo\Models\TaskManager;
 /** Class Todo **/
 class Todo
 {

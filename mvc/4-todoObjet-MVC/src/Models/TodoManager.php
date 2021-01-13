@@ -56,7 +56,7 @@ class TodoManager
         ));
     }
 
-    public function delete($slug)
+    public function delete()
     {
 
         $stmt = $this->bdd->prepare("DELETE FROM List WHERE id = ? AND user_id = ?");
@@ -66,12 +66,16 @@ class TodoManager
         ));
     }
 
-    public function getAll()
+    public function getAll($id=0)
     {
-        $stmt = $this->bdd->prepare('SELECT * FROM List WHERE user_id = ?');
-        $stmt->execute(array(
-            $_SESSION["user"]["id"]
-        ));
+        if($id>=1){
+            $stmt = $this->bdd->prepare('SELECT * FROM task WHERE list_id = ?');
+            $stmt->execute(array($id));
+        }
+        else{
+            $stmt = $this->bdd->prepare('SELECT * FROM List WHERE user_id = ?');
+            $stmt->execute(array($_SESSION["user"]["id"]));
+        }
 
         return $stmt->fetchAll(PDO::FETCH_CLASS, "Todo\Models\Todo");
     }

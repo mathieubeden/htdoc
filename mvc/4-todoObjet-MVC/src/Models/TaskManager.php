@@ -16,12 +16,12 @@ class TaskManager
         $this->bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
-    public function find($name, $userId)
+    public function find($name, $Id)
     {
-        $stmt = $this->bdd->prepare("SELECT * FROM List WHERE name = ? AND user_id = ?");
+        $stmt = $this->bdd->prepare("SELECT * FROM task WHERE name = ? AND list_id = ?");
         $stmt->execute(array(
             $name,
-            $userId
+            $Id
         ));
         $stmt->setFetchMode(PDO::FETCH_CLASS, "Todo\Models\Todo");
 
@@ -46,7 +46,7 @@ class TaskManager
         ));
     }
 
-    public function getAll($id)
+    public function getAll($id=1)
     {
         $stmt = $this->bdd->prepare('SELECT * FROM task WHERE list_id = ?');
         $stmt->execute(array(

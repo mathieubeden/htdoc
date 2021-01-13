@@ -24,14 +24,14 @@ ob_start();
                             </div>
                             <div class="separateur"></div>
                             <div class="bottom">
-                            <?php
-                               /* foreach($todo->tasks() as $key => $task){
+                            <?php /*
+                                foreach($todo->tasks() as $key => $task){
                                     ?>
 
-                                    <p class="<?php if ($task->getCheck())echo'check'; ?>"></p>
+                                    <p class="<?php if ($task->getCheck())echo $task->getCheck(); ?>"><?= $task['name'] ?></p>
 
                                     <?php
-                                }*/
+                                } */
                             ?>
                             </div>
                         </div>
