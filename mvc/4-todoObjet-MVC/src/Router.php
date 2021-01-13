@@ -2,6 +2,8 @@
 namespace Todo;
 
 //use App\Controllers\UserController;
+use Exception;
+
 /** Class Router **/
 
 class Router {
@@ -27,7 +29,7 @@ class Router {
 
     public function run() {
         if(!isset($this->routes[$_SERVER['REQUEST_METHOD']])){
-            throw new \Exception('REQUEST_METHOD does not exist');
+            throw new Exception('REQUEST_METHOD does not exist');
         }
         //boucle pour vérfier POST ou GET
         foreach($this->routes[$_SERVER['REQUEST_METHOD']] as $route){

@@ -5,7 +5,7 @@ namespace Todo\Models;
 use PDO;
 
 /** Class UserManager **/
-class TodoManager
+class TaskManager
 {
 
     private $bdd;
@@ -30,15 +30,6 @@ class TodoManager
 
     public function store()
     {
-        $stmt = $this->bdd->prepare("INSERT INTO List(name, user_id) VALUES (?, ?)");
-        $stmt->execute(array(
-            $_POST["name"],
-            $_SESSION["user"]["id"]
-        ));
-    }
-
-    public function storeTask()
-    {
         $stmt = $this->bdd->prepare("INSERT INTO task(name, list_id) VALUES (?, ?)");
         $stmt->execute(array(
             $_POST["nameTask"],
@@ -48,29 +39,18 @@ class TodoManager
 
     public function update($slug)
     {
-        $stmt = $this->bdd->prepare("UPDATE List SET name = ? WHERE name = ? AND user_id = ?");
+        $stmt = $this->bdd->prepare("UPDATE task SET name = ? WHERE id = ?");
         $stmt->execute(array(
-            $_POST['nameTodo'],
             $slug,
-            $_SESSION["user"]["id"]
+            $_POST["id"],
         ));
     }
 
-    public function delete($slug)
+    public function getAll($id)
     {
-
-        $stmt = $this->bdd->prepare("DELETE FROM List WHERE id = ? AND user_id = ?");
+        $stmt = $this->bdd->prepare('SELECT * FROM task WHERE list_id = ?');
         $stmt->execute(array(
-            $_POST["idList"],
-            $_SESSION["user"]["id"]
-        ));
-    }
-
-    public function getAll()
-    {
-        $stmt = $this->bdd->prepare('SELECT * FROM List WHERE user_id = ?');
-        $stmt->execute(array(
-            $_SESSION["user"]["id"]
+            $id
         ));
 
         return $stmt->fetchAll(PDO::FETCH_CLASS, "Todo\Models\Todo");

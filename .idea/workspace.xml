@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3aaa1ac1-2a6f-41cc-9e7b-9c2f3bcc8f4b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mvc/test.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a1-site/alea alpha.js" beforeDir="false" afterPath="$PROJECT_DIR$/a1-site/alea alpha.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a1-site/assets/js/css-browser-selector.js" beforeDir="false" afterPath="$PROJECT_DIR$/a1-site/assets/js/css-browser-selector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a1-site/assets/js/game-of-life-v3.1.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/a1-site/assets/js/game-of-life-v3.1.1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a1-site/img/LandscapeData.js" beforeDir="false" afterPath="$PROJECT_DIR$/a1-site/img/LandscapeData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a1-site/img/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/a1-site/img/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a1-site/img/libs/audio.js" beforeDir="false" afterPath="$PROJECT_DIR$/a1-site/img/libs/audio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/ajblog.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/ajblog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/delet.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/delet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/modif.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/modif.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/formation/inscr.php" beforeDir="false" afterPath="$PROJECT_DIR$/formation/inscr.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/4-blog-mvc-ameliore-objet/Vue/vueAccueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/4-blog-mvc-ameliore-objet/Vue/vueAccueil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/4-blog-mvc-ameliore-objet/Vue/vueBillet.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/4-blog-mvc-ameliore-objet/Vue/vueBillet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objet/cour2/spaceuse.php" beforeDir="false" afterPath="$PROJECT_DIR$/objet/cour2/spaceuse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/sql/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/4-todoObjet-MVC/src/Models/Todo.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/4-todoObjet-MVC/src/Models/Todo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/4-todoObjet-MVC/src/Models/TodoManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/4-todoObjet-MVC/src/Models/TodoManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/4-todoObjet-MVC/src/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/4-todoObjet-MVC/src/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/4-todoObjet-MVC/src/Views/Todo/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/4-todoObjet-MVC/src/Views/Todo/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +44,12 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="PHP Script.index.php">
+  <component name="RunManager" selected="PHPUnit.src">
     <configuration name="js2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/htdocs/js2.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="src" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$/mvc/4-todoObjet-MVC/src" />
       <method v="2" />
     </configuration>
     <configuration name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/mvc/4-blog-mvc-ameliore-objet/index.php">
@@ -69,6 +62,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.src" />
         <item itemvalue="PHP Script.index.php" />
         <item itemvalue="JavaScript Debug.js2.html" />
       </list>
@@ -86,6 +80,7 @@
       <workItem from="1607700046834" duration="168000" />
       <workItem from="1610110572197" duration="3519000" />
       <workItem from="1610115065148" duration="1421000" />
+      <workItem from="1610531753853" duration="299000" />
     </task>
     <servers />
   </component>

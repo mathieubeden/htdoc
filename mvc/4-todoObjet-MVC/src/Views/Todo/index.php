@@ -1,4 +1,4 @@
-<?php
+let i; <?php
 ob_start();
 
 ?>
@@ -14,7 +14,8 @@ ob_start();
     <div class="blockAllList" id="masonry">
 
         <?php
-            foreach ($todos as $todo) {
+        $todos=0;
+        foreach ($todos as $todo) {
                 ?>
                     <div class="blockCard">
                         <div class="card">
@@ -24,7 +25,15 @@ ob_start();
                             </div>
                             <div class="separateur"></div>
                             <div class="bottom">
-                                
+                            <?php
+                                foreach($todo->tasks() as $key => $task){
+                                    ?>
+
+                                    <p class="<?php if ($task->getCheck())echo'check'; ?>"></p>
+
+                                    <?php
+                                }
+                            ?>
                             </div>
                         </div>
                     </div>
@@ -46,11 +55,11 @@ let nb_col = window.innerWidth > 1024 ? 3 : window.innerWidth > 768 ? 3 : 1;
 
 let col_height = [];
 
-for (var i = 0; i <= nb_col; i++) {
+for (i = 0; i <= nb_col; i++) {
     col_height.push(0);
 }
 
-for (var i = 0; i < container.children.length; i++) {
+for (i = 0; i < container.children.length; i++) {
     let order = (i + 1) % nb_col || nb_col;
     container.children[i].style.order = order;
     col_height[order] += container.children[i].clientHeight;
