@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3aaa1ac1-2a6f-41cc-9e7b-9c2f3bcc8f4b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/4-todoObjet-MVC/src/Models/Todo.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/4-todoObjet-MVC/src/Models/Todo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/4-todoObjet-MVC/src/Models/TodoManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/4-todoObjet-MVC/src/Models/TodoManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/4-todoObjet-MVC/src/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/4-todoObjet-MVC/src/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/4-todoObjet-MVC/src/Views/Todo/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/4-todoObjet-MVC/src/Views/Todo/index.php" afterDir="false" />
-    </list>
+    <list default="true" id="3aaa1ac1-2a6f-41cc-9e7b-9c2f3bcc8f4b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,8 +30,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../php/php.exe" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -80,8 +76,16 @@
       <workItem from="1607700046834" duration="168000" />
       <workItem from="1610110572197" duration="3519000" />
       <workItem from="1610115065148" duration="1421000" />
-      <workItem from="1610531753853" duration="299000" />
+      <workItem from="1610531753853" duration="598000" />
     </task>
+    <task id="LOCAL-00001" summary="todomanager ajouté je sais pas comment ca marche">
+      <created>1610532314663</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610532314663</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,12 +96,29 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="BEK_SORT_TYPE" value="1" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="todomanager ajouté je sais pas comment ca marche" />
+    <option name="LAST_COMMIT_MESSAGE" value="todomanager ajouté je sais pas comment ca marche" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

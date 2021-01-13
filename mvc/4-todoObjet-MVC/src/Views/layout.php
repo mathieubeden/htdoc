@@ -7,11 +7,12 @@
     <title>— ToDoList —</title>
     <script src="https://kit.fontawesome.com/c1d0ab37d6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/jpg" href="./favicon.jpg">
 </head>
 <body>
     <header>
         <nav>
-            <a href="/" class="logo">LOGO</a>
+            <a href="/" class="logo">LEGO</a>
             <?php
                 if (!isset($_SESSION["user"]["username"])) {
                     ?>

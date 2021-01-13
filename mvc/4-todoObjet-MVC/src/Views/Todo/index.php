@@ -1,4 +1,4 @@
-let i; <?php
+<?php
 ob_start();
 
 ?>
@@ -14,7 +14,6 @@ ob_start();
     <div class="blockAllList" id="masonry">
 
         <?php
-        $todos=0;
         foreach ($todos as $todo) {
                 ?>
                     <div class="blockCard">
@@ -26,13 +25,13 @@ ob_start();
                             <div class="separateur"></div>
                             <div class="bottom">
                             <?php
-                                foreach($todo->tasks() as $key => $task){
+                               /* foreach($todo->tasks() as $key => $task){
                                     ?>
 
                                     <p class="<?php if ($task->getCheck())echo'check'; ?>"></p>
 
                                     <?php
-                                }
+                                }*/
                             ?>
                             </div>
                         </div>
