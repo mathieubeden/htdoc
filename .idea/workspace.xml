@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3aaa1ac1-2a6f-41cc-9e7b-9c2f3bcc8f4b" name="Default Changelist" comment="" />
+    <list default="true" id="3aaa1ac1-2a6f-41cc-9e7b-9c2f3bcc8f4b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Controllers/WelcomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/config/images.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/article.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/confirm.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/contact.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/photo.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/photo_ok.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/template.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/v1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/.env" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/.env" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +49,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../php/php.exe" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -77,6 +91,8 @@
       <workItem from="1610110572197" duration="3519000" />
       <workItem from="1610115065148" duration="1421000" />
       <workItem from="1610531753853" duration="598000" />
+      <workItem from="1611577999788" duration="26000" />
+      <workItem from="1611578171513" duration="7556000" />
     </task>
     <task id="LOCAL-00001" summary="todomanager ajouté je sais pas comment ca marche">
       <created>1610532314663</created>
