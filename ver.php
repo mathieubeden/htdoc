@@ -38,7 +38,7 @@
             echo'<h1>login incorrect</h1>';
             $fail+=1;
         }
-
+            }}
 ?>
 <br>
-<button onclick="window.location.href = './logar.php?miss=<?php echo $fail;?>'">réessayer</button>
+<button onclick="window.location.href = './logar.php?miss=<?= $fail?>'">réessayer</button>

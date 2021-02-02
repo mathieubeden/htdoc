@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FilmController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,31 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('test', function () {
-    return view('v1');
+Route::get('/', function () {
+    return view('welcome');
 });
 
-Route::get('{n}', function($n) {
-    return 'Je suis la page ' . $n . ' !';
-})->where('n', '[0-9]+');
-
-Route::get('contact', function() {
-    return "C'est moi le contact.";
-});
-use App\Http\Controllers\WelcomeController;
-Route::get('/', [WelcomeController::class, 'index']);
-use App\Http\Controllers\ArticleController;
-Route::get('article/{n}', [ArticleController::class, 'show'])->where('n', '[0-9]+')->name('moeh');
-use App\Http\Controllers\PhotoController;
-Route::get('photo', [PhotoController::class, 'create']);
-Route::post('photo', [PhotoController::class, 'store']);
-Route::get('/test-contact', function () {
-    return new App\Mail\Contact([
-        'nom' => 'Durand',
-        'email' => 'durand@chezlui.com',
-        'message' => 'Je voulais vous dire que votre site est magnifique !'
-    ]);
-});
-use App\Http\Controllers\ContactController;
-Route::get('contact', [ContactController::class, 'create']);
-Route::post('contact', [ContactController::class, 'store']);
+Route::resource('films', FilmController::class);
+Route::delete('films/force/{film}', [FilmController::class, 'forceDestroy'])->name('films.force.destroy');
+Route::put('films/restore/{film}', [FilmController::class, 'restore'])->name('films.restore');
+Route::get('category/{slug}/films', [FilmController::class, 'index'])->name('films.category');

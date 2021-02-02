@@ -22,9 +22,9 @@ abstract class vehicule{
         return $this->poids;
     }
     public function set_poids($npoids){
-        if($this->poids+$npoids!>2500){
+        if($this->poids+$npoids<2500){
         $this->poids+=$npoids;}
-        else{$this->poids=2500}
+        else{$this->poids=2500;}
     }
     public function get_color(){
         return $this->couleur;

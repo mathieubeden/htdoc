@@ -6,7 +6,7 @@ if(isset($_POST['user'])){
 $user=htmlspecialchars($_POST['user']);
 hash('ripemd160', $_POST['pass']);
 $connect=new connect;
-$verif=$connect=>verivic($user,$pass);
+$verif=$connect->verivic($user,$pass);
 if($verif){
     //vueAcueuil.pgh
 }
