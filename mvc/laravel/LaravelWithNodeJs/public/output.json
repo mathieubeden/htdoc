@@ -1,0 +1,234 @@
+[
+    {
+        "rank": 1,
+        "title": "Chick Corea has died",
+        "url": "https://chickcorea.com/",
+        "points": 322,
+        "username": "rock_artist",
+        "comments": 5
+    },
+    {
+        "rank": 2,
+        "title": "Spotify Optimized the Largest Dataflow Job Ever for Wrapped 2020",
+        "url": "https://engineering.atspotify.com/2021/02/11/how-spotify-optimized-the-largest-dataflow-job-ever-for-wrapped-2020",
+        "points": 63,
+        "username": "SirOibaf",
+        "comments": 2
+    },
+    {
+        "rank": 3,
+        "title": "Fuzz me wrong – How QuickCheck destroyed my favourite theory",
+        "url": "https://thma.github.io/posts/2021-01-30-How-QuickCheck-destroyed-my-favourite-theory.html",
+        "points": 27,
+        "username": "lrngjcb",
+        "comments": 1
+    },
+    {
+        "rank": 4,
+        "title": "Australia to introduce Google, Facebook legislation to parliament next week",
+        "url": "https://www.reuters.com/article/us-australia-media-google/australia-to-introduce-landmark-google-facebook-legislation-to-parliament-next-week-idUSKBN2AC0BF",
+        "points": 62,
+        "username": "tgvaughan",
+        "comments": 3
+    },
+    {
+        "rank": 5,
+        "title": "External boot disks still don’t work properly with M1 Macs",
+        "url": "https://eclecticlight.co/2021/02/10/external-boot-disks-still-dont-work-properly-with-m1-macs/",
+        "points": 35,
+        "username": "zdw",
+        "comments": 3
+    },
+    {
+        "rank": 6,
+        "title": "Comparison of Rust async and Linux thread context switch time and memory use",
+        "url": "https://github.com/jimblandy/context-switch",
+        "points": 232,
+        "username": "viraptor",
+        "comments": 8
+    },
+    {
+        "rank": 7,
+        "title": "Impraise (YC S14) Is Hiring Account Executive",
+        "url": "https://www.workatastartup.com/jobs/41981",
+        "points": 27,
+        "username": "hide",
+        "comments": null
+    },
+    {
+        "rank": 8,
+        "title": "Stonehenge may have been built in Wales and then relocated",
+        "url": "https://www.bbc.co.uk/news/uk-wales-56029203",
+        "points": 29,
+        "username": "samizdis",
+        "comments": 2
+    },
+    {
+        "rank": 9,
+        "title": "Apple redirects Google Safe Browsing traffic through proxy servers in iOS 14.5",
+        "url": "https://the8-bit.com/apple-proxies-google-safe-browsing-privacy/",
+        "points": 173,
+        "username": "CharlesW",
+        "comments": 7
+    },
+    {
+        "rank": 10,
+        "title": "Computer Networks: A Systems Approach",
+        "url": "https://book.systemsapproach.org/",
+        "points": 128,
+        "username": "Ballu",
+        "comments": 7
+    },
+    {
+        "rank": 11,
+        "title": "Foldable Words",
+        "url": "http://bit-player.org/2021/foldable-words",
+        "points": 106,
+        "username": "Veen",
+        "comments": 8
+    },
+    {
+        "rank": 12,
+        "title": "U.S. Postage Stamp Will Honor the 'First Lady of Physics'",
+        "url": "https://www.smithsonianmag.com/smart-news/us-postage-stamp-will-honor-first-lady-physics-180976979/",
+        "points": 93,
+        "username": "indogooner",
+        "comments": 9
+    },
+    {
+        "rank": 13,
+        "title": "Interview with Bill Joy (1984)",
+        "url": "https://web.archive.org/web/20060701083055/http://web.cecs.pdx.edu/~kirkenda/joy84.html",
+        "points": 27,
+        "username": "susam",
+        "comments": 5
+    },
+    {
+        "rank": 14,
+        "title": "Leonardo Da Vinci and Fluid Mechanics",
+        "url": "https://www.annualreviews.org/doi/full/10.1146/annurev-fluid-022620-122816",
+        "points": 6,
+        "username": "cableclasper",
+        "comments": 2
+    },
+    {
+        "rank": 15,
+        "title": "Linear-base makes writing Linear Haskell easy and fun",
+        "url": "https://www.tweag.io/blog/2021-02-10-linear-base/",
+        "points": 76,
+        "username": "lelf",
+        "comments": 10
+    },
+    {
+        "rank": 16,
+        "title": "MasterCard to open up network to cryptocurrencies",
+        "url": "https://www.reuters.com/article/us-crypto-currency-mastercard/mastercard-to-open-up-network-to-select-cryptocurrencies-idUSKBN2AA2WF",
+        "points": 895,
+        "username": "ArtTimeInvestor",
+        "comments": 21
+    },
+    {
+        "rank": 17,
+        "title": "Well-behaved alias commands on Windows",
+        "url": "https://nullprogram.com/blog/2021/02/08/",
+        "points": 26,
+        "username": "pmarin",
+        "comments": 6
+    },
+    {
+        "rank": 18,
+        "title": "Performance Showdown: Rust vs Javascript (2020)",
+        "url": "https://cesarvr.io/post/rust-performance/",
+        "points": 22,
+        "username": "KingOfCoders",
+        "comments": 5
+    },
+    {
+        "rank": 19,
+        "title": "More evidence that Neanderthals were ‘absorbed’ by humans, not wiped out",
+        "url": "https://gizmodo.com/more-evidence-that-neanderthals-were-absorbed-by-huma-1846173050",
+        "points": 95,
+        "username": "Hooke",
+        "comments": 12
+    },
+    {
+        "rank": 20,
+        "title": "Pravetz Computers",
+        "url": "https://en.wikipedia.org/wiki/Pravetz_computers",
+        "points": 159,
+        "username": "incomplete",
+        "comments": 14
+    },
+    {
+        "rank": 21,
+        "title": "Show HN: Real-time multiplayer games with cubes. Early feedback on dev docs?",
+        "url": "https://docs.particubes.com/",
+        "points": 115,
+        "username": "aduermael",
+        "comments": 12
+    },
+    {
+        "rank": 22,
+        "title": "Kubernetes Failure Stories",
+        "url": "https://k8s.af",
+        "points": 463,
+        "username": "jakozaur",
+        "comments": 16
+    },
+    {
+        "rank": 23,
+        "title": "Running unmodified Linux programs on Fuchsia",
+        "url": "https://fuchsia-review.googlesource.com/c/fuchsia/+/485181",
+        "points": 183,
+        "username": "lyssue",
+        "comments": 18
+    },
+    {
+        "rank": 24,
+        "title": "Dyson air purifier outperformed by cheap DIY box fan filter in Marketplace test",
+        "url": "https://www.cbc.ca/1.5900782",
+        "points": 692,
+        "username": "walterbell",
+        "comments": 23
+    },
+    {
+        "rank": 26,
+        "title": "Unknown Unknowns in Machine Learning",
+        "url": "https://ai.googleblog.com/2021/02/uncovering-unknown-unknowns-in-machine.html",
+        "points": 35,
+        "username": "atg_abhishek",
+        "comments": 8
+    },
+    {
+        "rank": 27,
+        "title": "Why I Built Litestream",
+        "url": "https://litestream.io/blog/why-i-built-litestream/",
+        "points": 594,
+        "username": "benbjohnson",
+        "comments": 19
+    },
+    {
+        "rank": 28,
+        "title": "Show HN: git-peek – git repo to local editor instantly",
+        "url": "https://github.com/jarred-sumner/git-peek",
+        "points": 98,
+        "username": "Jarred",
+        "comments": 13
+    },
+    {
+        "rank": 29,
+        "title": "Idioms for the D Programming Language",
+        "url": "https://p0nce.github.io/d-idioms/",
+        "points": 140,
+        "username": "crazypython",
+        "comments": 17
+    },
+    {
+        "rank": 30,
+        "title": "Beej's Guide to Network Programming (1994-2020)",
+        "url": "https://beej.us/guide/bgnet/html/",
+        "points": 916,
+        "username": "ColinWright",
+        "comments": 1
+    }
+]

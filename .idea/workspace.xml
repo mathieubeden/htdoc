@@ -2,56 +2,140 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3aaa1ac1-2a6f-41cc-9e7b-9c2f3bcc8f4b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Controllers/ContactsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/app/repositories/PhotosRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/app/repositories/PhotosRepositoryInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/emails/contact.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/errors/418.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/infos.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/.styleci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/.styleci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Controllers/ContactController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Controllers/PhotoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Controllers/PhotoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Middleware/TrustProxies.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Middleware/TrustProxies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/config/broadcasting.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/config/broadcasting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/config/cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/config/cache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/config/cors.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/config/cors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/config/hashing.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/config/hashing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/config/logging.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/config/logging.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/lang/en/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/lang/en/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/lang/en/validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/lang/fr/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/lang/fr/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/lang/fr/validation-inline.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/lang/fr/validation-inline.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/lang/fr/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/lang/fr/validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/contact.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/template.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/laravel/laravel8/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/todolist/controleur/connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/todolist/controleur/connection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/todolist/modele/connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/todolist/modele/connect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objet/exo01/vehicule.php" beforeDir="false" afterPath="$PROJECT_DIR$/objet/exo01/vehicule.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ver.php" beforeDir="false" afterPath="$PROJECT_DIR$/ver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/.styleci.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Console/Kernel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Exceptions/Handler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Controllers/ArticleController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Controllers/ContactsController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Controllers/Controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Controllers/FilmController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Controllers/PhotoController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Controllers/UsersController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Controllers/WelcomeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Kernel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Middleware/Authenticate.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Middleware/EncryptCookies.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Middleware/PreventRequestsDuringMaintenance.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Middleware/TrimStrings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Middleware/TrustHosts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Middleware/TrustProxies.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Requests/ContactRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Requests/Film.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Http/Requests/ImagesRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Mail/Contact.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Models/Category.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Models/Contact.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Models/Film.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Models/Test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Models/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Providers/AppServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Providers/AuthServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Providers/BroadcastServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Providers/EventServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/Providers/RouteServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/repositories/PhotosRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/app/repositories/PhotosRepositoryInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/artisan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/bootstrap/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/bootstrap/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/config/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/config/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/config/broadcasting.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/config/cache.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/config/cors.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/config/database.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/config/filesystems.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/config/hashing.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/config/images.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/config/logging.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/config/mail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/config/queue.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/config/services.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/config/session.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/config/view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/database/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/database/factories/CategoryFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/database/factories/FilmFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/database/factories/UserFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/database/migrations/2020_09_22_135403_create_films_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/database/migrations/2020_09_23_122357_create_categories_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/database/migrations/2021_01_27_081335_test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/database/migrations/2021_01_27_081612_create_contacts_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/database/seeders/DatabaseSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/phpunit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/public/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/public/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/public/web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/css/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/lang/en/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/lang/en/pagination.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/lang/en/passwords.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/lang/en/validation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/lang/fr/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/lang/fr/pagination.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/lang/fr/passwords.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/lang/fr/validation-inline.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/lang/fr/validation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/article.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/confirm.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/contact.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/emails/contact.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/errors/418.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/infos.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/photo.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/photo_ok.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/template.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/v1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/vendor/pagination/bootstrap-4.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/vendor/pagination/default.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/vendor/pagination/semantic-ui.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/vendor/pagination/simple-bootstrap-4.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/vendor/pagination/simple-default.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/vendor/pagination/simple-tailwind.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/vendor/pagination/tailwind.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/routes/api.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/routes/channels.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/routes/console.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/routes/web.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/server.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/start.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/storage/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/storage/app/public/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/storage/framework/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/storage/framework/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/storage/framework/cache/data/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/storage/framework/sessions/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/storage/framework/testing/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/storage/framework/views/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/storage/logs/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/tests/CreatesApplication.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/tests/Feature/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/tests/TestCase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/tests/Unit/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/laravel/laravel8/webpack.mix.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,9 +154,6 @@
     <include_path>
       <path value="$PROJECT_DIR$/../php" />
     </include_path>
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1lTIPUpFXnF7hXwIokAxqjAC6NV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -145,6 +226,8 @@
       <workItem from="1611577999788" duration="26000" />
       <workItem from="1611578171513" duration="7556000" />
       <workItem from="1611666519299" duration="18676000" />
+      <workItem from="1612946962238" duration="4114000" />
+      <workItem from="1613135629985" duration="3604000" />
     </task>
     <task id="LOCAL-00001" summary="todomanager ajouté je sais pas comment ca marche">
       <created>1610532314663</created>

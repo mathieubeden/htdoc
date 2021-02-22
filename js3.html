@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+function econ(){
+    var f=1;
+    var d=2.1;
+    var g=14000;
+    var a=134*2*15;
+    var b=135*0.25;
+    var c=a+b;
+    var e=0;
+    while(135*3-c<e){
+        d-=0.1;
+        e=g*d;
+        g+=e;
+        f++;
+    }
+    return f
+}
+console.log(econ());
+
+
+    //Sachant que la Chine émet 14 milliard de tonnes CO2 par an et augmente de 2%/an puis 1.9%/an puis 1.8%,...
+    // En France, la part des transport (camion, auto, avion,..) est 1/3 des émissions soit 134 Millions de tonnes / an
+    // si tout le monde (enfant, malade,...) mange végan , on économise 15 millions de tonnes /an.
+    // Sachant que si toute la France roule en électrique (25% de CO2 en moins et pas 100% à cause des batteries) et mange végan et qu'on élimine tous les camions, les touristes traversant le pays
+    // on économie 134/4+15 = 48.5 Millions de tonnes an, en quelle année la France aura compensé juste une année d'augmentation de CO2 de la Chine ?
+
+
+    function Calcul() {
+
+        // variable pour stocker le résultat
+        let Fr = 48.5;
+        let Ch = 14000;
+        let augmente_Ch = 50;
+
+        var annee = 0;
+        while (augmente_Ch >= Fr) {
+
+            augmente_Ch = Ch * (0.02 - annee * 0.001);
+            Ch = Ch + augmente_Ch;
+            annee++;
+            console.log(augmente_Ch);
+
+        }
+        // Résultat
+        return annee;
+    }
+    console.log(Calcul() + " années");
+</script>
+
+</html>

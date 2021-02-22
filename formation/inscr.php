@@ -25,25 +25,23 @@ intitulé de formtion : <input required type="text" name="intit" id="intit"><br>
         
         else{echo "des champs sont invalide ou manquant";}
         } ?></h3>
+
+
 <?php
-        try
-{
-$base = new PDO('mysql:host=127.0.0.1;dbname=formation1', 'root', '');
-$base->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-$sql = "SELECT Nom, Prenom,intit FROM forma1";
-// Préparation de la requête avec les marqueurs
-$resultat = $base->prepare($sql);
-$resultat->execute();
-while ($ligne = $resultat->fetch())
-{
-echo 'Nom : '.$ligne['Nom'].', Prénom : '.$ligne['Prenom'].', intitulé : '.$ligne['intit'].'<br />';
+try{
+  $base = new PDO('mysql:host=127.0.0.1;dbname=formation1', 'root', '');
+  $base->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+  $sql = "SELECT Nom, Prenom,intit FROM forma1";// Préparation de la requête avec les marqueurs
+  $resultat = $base->prepare($sql);
+  $resultat->execute();
+  while ($ligne = $resultat->fetch()){
+    echo 'Nom : '.$ligne['Nom'].', Prénom : '.$ligne['Prenom'].', intitulé : '.$ligne['intit'].'<br />';
+  }
+  $resultat->closeCursor();
 }
-$resultat->closeCursor();
-}
-catch(Exception $e)
-{
-// message en cas d'erreur
-die('Erreur : '.$e->getMessage());
+catch(Exception $e){
+  // message en cas d'erreur
+  die('Erreur : '.$e->getMessage());
 }
 ?>
 </body>
