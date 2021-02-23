@@ -23,7 +23,7 @@
         <footer id="piedBlog">
             ne pas cliquer <a href="https://youtu.be/2ocykBzWDiM">ici</a>.
         </footer>
-    </div> <!-- #global -->
+    </div><br> <!-- #global -->
 </body>
 
 </html>

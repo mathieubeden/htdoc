@@ -14,11 +14,15 @@ html, body {
 body {
     color: #59ff59;
     background: rgb(214, 0, 64);
-    font-family:'Comic Sans MS' ;
+    font-family:'Comic Sans MS';
 }
 
 h1 {
     color: rgb(0, 68, 255);
+}
+.formule{
+    text-align: center;
+    padding-bottom: 15px !important;
 }
 
 .titreBillet {
@@ -32,7 +36,8 @@ h1 {
     margin: auto;	/* Permet de centrer la div */
     text-align: justify;
     padding: 5px 20px;
-    border-radius: 15px;
+    border-radius: 30px;
+    padding-bottom: 15px !important;
 }
 
 #contenu {

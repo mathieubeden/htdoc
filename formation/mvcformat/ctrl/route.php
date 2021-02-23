@@ -26,12 +26,13 @@ class Routeur
 
                     $this->ctrlBillet->postuler($_POST);
                     $this->ctrlAccueil->accueil();
-                } else if ($_GET['action'] == 'modif') { //
-                    header('location:https://youtu.be/2ocykBzWDiM');
+                } else if ($_GET['action'] == 'modificateur') { //
+                    header('location:https://youtu.be/dQw4w9WgXcQ');
                 } else if ($_GET['action'] == 'delete') {
-
+                    $this->ctrlBillet->debilleter($_POST['id']);
+                    $this->ctrlAccueil->accueil();
                 } else
-                    header('location:https://youtu.be/2ocykBzWDiM');
+                    header('location:https://youtu.be/dQw4w9WgXcQ');
             } else {  // aucune action définie : affichage de l'accueil
                $this->ctrlAccueil->accueil();
             }
