@@ -27,7 +27,11 @@ class Routeur
                     $this->ctrlBillet->postuler($_POST);
                     $this->ctrlAccueil->accueil();
                 } else if ($_GET['action'] == 'modificateur') { //
-                    header('location:https://youtu.be/dQw4w9WgXcQ');
+
+                    $this->ctrlAccueil->modificateur();
+                } else if ($_GET['action'] == 'modif') { //
+                    $this->ctrlBillet->modifier($_POST);
+                    $this->ctrlAccueil->accueil();
                 } else if ($_GET['action'] == 'delete') {
                     $this->ctrlBillet->debilleter($_POST['id']);
                     $this->ctrlAccueil->accueil();

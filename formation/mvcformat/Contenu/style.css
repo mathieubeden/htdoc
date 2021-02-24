@@ -12,13 +12,15 @@ html, body {
 }
 
 body {
-    color: #59ff59;
-    background: rgb(214, 0, 64);
+    color: #bdbdbd;
+    background-image: url(./AS17-140-21367.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family:'Comic Sans MS';
 }
 
 h1 {
-    color: rgb(0, 68, 255);
+    color: rgb(255, 255, 255);
 }
 .formule{
     text-align: center;
@@ -31,7 +33,7 @@ h1 {
 
 #global {
     min-height: 100%;  /* Voir commentaire sur html et body plus haut */
-    background: #1d1027;
+    background: rgba(0, 0, 0, 0.8);
     width: 80%;
     margin: auto;	/* Permet de centrer la div */
     text-align: justify;

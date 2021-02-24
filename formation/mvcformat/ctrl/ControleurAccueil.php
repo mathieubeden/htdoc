@@ -16,6 +16,12 @@ class ControleurAccueil {
         $vue = new Vue("Accueil");
        $vue->generer(array('billets' => $billets));
     }
+    public function modificateur()
+    {
+        $billets = $this->billet->getBillets();
+        $vue = new Vue("Modif");
+        $vue->generer(array('billets' => $billets));
+    }
 
 }
 
